@@ -42,4 +42,11 @@ mod tests {
         assert_eq!(has_teen(20, 10, 13), true);
         assert_eq!(has_teen(8, 7, 24), false);
     }
+
+    #[test]
+    fn test_in3050() {
+        assert_eq!(in3050(30, 31), true);
+        assert_eq!(in3050(30, 41), false);
+        assert_eq!(in3050(40, 50), true);
+    }
 }

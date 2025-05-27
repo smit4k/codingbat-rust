@@ -43,3 +43,7 @@ pub fn has_teen(a: i32, b: i32, c: i32) -> bool {
     [a, b, c].iter().any(|&n| (13..=19).contains(&n))
 }
 
+pub fn in3050(a: i32, b: i32) -> bool {
+    ((a>=30 && a<=40) && (b>=30 && b<=40)) || ((a>=40 && a<=50) && b>=40 && b<=50)
+}
+
