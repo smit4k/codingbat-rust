@@ -74,4 +74,11 @@ mod tests {
         assert_eq!(pos_neg(4, 3, true), false);
         assert_eq!(pos_neg(6, -2, true), false);
     }
+
+    #[test]
+    fn test_lone_teen() {
+        assert_eq!(lone_teen(13, 99), true);
+        assert_eq!(lone_teen(21, 19), true);
+        assert_eq!(lone_teen(13, 13), false);
+    }
 }
