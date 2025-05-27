@@ -34,4 +34,12 @@ mod tests {
         assert_eq!(or35(10), true);
         assert_eq!(or35(8), false);
     }
+
+    #[test]
+    fn test_has_teen() {
+        assert_eq!(has_teen(13, 20, 10), true);
+        assert_eq!(has_teen(20, 19, 10), true) ;
+        assert_eq!(has_teen(20, 10, 13), true);
+        assert_eq!(has_teen(8, 7, 24), false);
+    }
 }
