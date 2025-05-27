@@ -63,4 +63,15 @@ mod tests {
         assert_eq!(icy_hot(-1, 120), true);
         assert_eq!(icy_hot(2, 120), false);
     }
+
+    #[test]
+    fn test_pos_neg() {
+        assert_eq!(pos_neg(1, -1, false), true);
+        assert_eq!(pos_neg(-1, 1, false), true);
+        assert_eq!(pos_neg(-4, -4, true), true);
+        assert_eq!(pos_neg(-1, -1, false), false);
+        assert_eq!(pos_neg(1, 1, false), false);
+        assert_eq!(pos_neg(4, 3, true), false);
+        assert_eq!(pos_neg(6, -2, true), false);
+    }
 }

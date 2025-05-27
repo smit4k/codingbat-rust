@@ -71,3 +71,17 @@ pub fn icy_hot(temp1:i32, temp2:i32) -> bool {
     }
     return false;
 }
+
+pub fn pos_neg(a:i32, b:i32, negative:bool) -> bool {
+    if !negative {
+        if (a < 0 && b > 0) || (a > 0 && b < 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    else {
+        a < 0 && b < 0
+    }
+}
