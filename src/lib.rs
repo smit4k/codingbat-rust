@@ -49,4 +49,11 @@ mod tests {
         assert_eq!(in3050(30, 41), false);
         assert_eq!(in3050(40, 50), true);
     }
+
+    #[test]
+    fn test_max1020() {
+        assert_eq!(max1020(11, 19), 19);
+        assert_eq!(max1020(19, 11), 19);
+        assert_eq!(max1020(11, 9), 11);
+    }
 }

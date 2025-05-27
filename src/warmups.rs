@@ -47,3 +47,20 @@ pub fn in3050(a: i32, b: i32) -> bool {
     ((a>=30 && a<=40) && (b>=30 && b<=40)) || ((a>=40 && a<=50) && b>=40 && b<=50)
 }
 
+pub fn max1020(a:i32, b:i32) -> i32 {
+    if [a, b].iter().any(|&n| (10..=20).contains(&n)) {
+        if (10..=20).contains(&a) && (10..=20).contains(&b) {
+            if a > b {
+                a
+            } else {
+                b
+            }
+        } else if (10..=20).contains(&a) {
+            a
+        } else {
+            b
+        }
+    } else {
+        0
+    }
+}
