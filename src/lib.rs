@@ -56,4 +56,11 @@ mod tests {
         assert_eq!(max1020(19, 11), 19);
         assert_eq!(max1020(11, 9), 11);
     }
+
+    #[test]
+    fn test_icy_hot() {
+        assert_eq!(icy_hot(120, -1), true);
+        assert_eq!(icy_hot(-1, 120), true);
+        assert_eq!(icy_hot(2, 120), false);
+    }
 }

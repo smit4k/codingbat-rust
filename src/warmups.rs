@@ -64,3 +64,10 @@ pub fn max1020(a:i32, b:i32) -> i32 {
         0
     }
 }
+
+pub fn icy_hot(temp1:i32, temp2:i32) -> bool {
+    if (temp1 < 0 && temp2 > 100) || (temp2 < 0 && temp1 > 100) {
+        return true;
+    }
+    return false;
+}
