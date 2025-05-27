@@ -1,0 +1,37 @@
+pub mod warmups;
+
+#[cfg(test)]
+mod tests {
+    use crate::warmups::*;
+
+    #[test]
+    fn test_sum_double() {
+        assert_eq!(sum_double(2, 2), 8);
+        assert_eq!(sum_double(0, 0), 0);
+        assert_eq!(sum_double(-3, -3), -12);
+    }
+
+    #[test]
+    fn test_makes_ten() {
+        assert_eq!(makes_ten(9, 10), true);
+        assert_eq!(makes_ten(9, 9), false);
+        assert_eq!(makes_ten(1, 9), true);
+        assert_eq!(makes_ten(10, 1), true);
+        assert_eq!(makes_ten(5, 5), true);
+    }
+
+    #[test]
+    fn test_close10() {
+        assert_eq!(close10(8, 13), 8);
+        assert_eq!(close10(13, 8), 8);
+        assert_eq!(close10(13, 7), 0);
+    }
+
+    #[test]
+    fn test_or35() {
+        assert_eq!(or35(3), true);
+        assert_eq!(or35(5), true) ;
+        assert_eq!(or35(10), true);
+        assert_eq!(or35(8), false);
+    }
+}
