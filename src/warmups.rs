@@ -39,16 +39,7 @@ pub fn or35(n:u32) -> bool {
     }
 }
 
-pub fn has_teen(a:i32, b:i32, c:i32) -> bool {
-    if a >= 13 && a <= 19 {
-        return true;
-    }
-    if b >= 13 && b <= 19 {
-        return true;
-    }
-    if c >= 13 && c <= 19 {
-        return true;
-    }
-    
-    return false;
+pub fn has_teen(a: i32, b: i32, c: i32) -> bool {
+    [a, b, c].iter().any(|&n| (13..=19).contains(&n))
 }
+
