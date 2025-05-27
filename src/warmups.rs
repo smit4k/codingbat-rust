@@ -92,3 +92,10 @@ pub fn pos_neg(a:i32, b:i32, negative:bool) -> bool {
         a < 0 && b < 0
     }
 }
+
+pub fn near_hundred(n: i32) -> bool {
+    let dist_100 = (100-n).abs();
+    let dist_200 = (200-n).abs();
+    
+    dist_100 <=10 || dist_200 <= 10
+}

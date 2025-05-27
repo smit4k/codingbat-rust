@@ -81,4 +81,13 @@ mod tests {
         assert_eq!(lone_teen(21, 19), true);
         assert_eq!(lone_teen(13, 13), false);
     }
+
+    #[test]
+    fn test_near_hundred() {
+        assert_eq!(near_hundred(93), true);
+        assert_eq!(near_hundred(90), true);
+        assert_eq!(near_hundred(89), false);
+        assert_eq!(near_hundred(198), true);
+        assert_eq!(near_hundred(178), false);
+    }
 }
