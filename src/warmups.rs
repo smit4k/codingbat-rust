@@ -1,3 +1,12 @@
+pub fn diff21(n: i32) -> i32 {
+    if n > 21 {
+        return 2*((n-21).abs());
+    }
+    else {
+        return (n-21).abs();
+    }
+}
+
 pub fn sum_double(a: i32, b: i32) -> i32 {
     if a == b {
         return 2*(a+b);

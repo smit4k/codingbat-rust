@@ -5,6 +5,13 @@ mod tests {
     use crate::warmups::*;
 
     #[test]
+    fn test_diff21() {
+        assert_eq!(diff21(19), 2);
+        assert_eq!(diff21(10), 11);
+        assert_eq!(diff21(21), 0);
+    }
+
+    #[test]
     fn test_sum_double() {
         assert_eq!(sum_double(2, 2), 8);
         assert_eq!(sum_double(0, 0), 0);
