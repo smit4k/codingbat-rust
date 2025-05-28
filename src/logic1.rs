@@ -26,3 +26,15 @@ pub fn teen_sum(a: i32, b: i32) -> i32 {
 pub fn old35(n: u32) -> bool {
     (n % 3 == 0) ^ (n % 5 == 0)
 }
+
+pub fn green_ticket(a: i32, b: i32, c: i32) -> i32 {
+    if a == b && b == c {
+        return 20;
+    }
+    else if a == b || a == c || b == c {
+        return 10;
+    }
+    else {
+        return 0;
+    }
+}

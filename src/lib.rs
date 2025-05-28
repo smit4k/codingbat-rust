@@ -141,4 +141,11 @@ mod tests {
         assert_eq!(old35(10), true);
         assert_eq!(old35(15), false);
     }
+
+    #[test]
+    fn test_green_ticket() {
+        assert_eq!(green_ticket(1, 2, 3), 0);
+        assert_eq!(green_ticket(2, 2, 2), 20);
+        assert_eq!(green_ticket(1, 1, 2), 10);
+    }
 }
