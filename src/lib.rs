@@ -134,4 +134,11 @@ mod tests {
         assert_eq!(teen_sum(10, 13), 19);
         assert_eq!(teen_sum(13, 2), 19);
     }
+
+    #[test]
+    fn test_old35() {
+        assert_eq!(old35(3), true);
+        assert_eq!(old35(10), true);
+        assert_eq!(old35(15), false);
+    }
 }

@@ -22,3 +22,7 @@ pub fn teen_sum(a: i32, b: i32) -> i32 {
     }
     return a + b;
 }
+
+pub fn old35(n: u32) -> bool {
+    (n % 3 == 0) ^ (n % 5 == 0)
+}
