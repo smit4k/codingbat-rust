@@ -155,4 +155,11 @@ mod tests {
         assert_eq!(tea_party(3, 8), 0);
         assert_eq!(tea_party(20, 6), 2);
     }
+
+    #[test]
+    fn test_cigar_party() {
+        assert_eq!(cigar_party(30, false), false);
+        assert_eq!(cigar_party(50, false), true);
+        assert_eq!(cigar_party(70, true), true);
+    }
 }

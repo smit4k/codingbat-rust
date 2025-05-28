@@ -46,3 +46,12 @@ pub fn tea_party(tea: i32, candy: i32) -> i32 {
         1
     }
 }
+
+pub fn cigar_party(cigars: i32, is_weekend: bool) -> bool {
+    if is_weekend {
+        cigars >= 40
+    }
+    else {
+        cigars >= 40 && cigars <= 60
+    }
+}
