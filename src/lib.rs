@@ -148,4 +148,11 @@ mod tests {
         assert_eq!(green_ticket(2, 2, 2), 20);
         assert_eq!(green_ticket(1, 1, 2), 10);
     }
+
+    #[test]
+    fn test_tea_party() {
+        assert_eq!(tea_party(6, 8), 1);
+        assert_eq!(tea_party(3, 8), 0);
+        assert_eq!(tea_party(20, 6), 2);
+    }
 }

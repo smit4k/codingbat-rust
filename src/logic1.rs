@@ -38,3 +38,15 @@ pub fn green_ticket(a: i32, b: i32, c: i32) -> i32 {
         return 0;
     }
 }
+
+pub fn tea_party(tea: i32, candy: i32) -> i32 {
+    if tea < 5 || candy < 5 {
+        0
+    }
+    else if tea >= candy * 2 || candy >= tea * 2 {
+        2
+    }
+    else {
+        1
+    }
+}
