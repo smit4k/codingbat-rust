@@ -15,3 +15,10 @@ pub fn more20(n: u32) -> bool {
 pub fn two_as_one(a: i32, b: i32, c: i32) -> bool {
     a + b == c || a + c == b || b + c == a
 }
+
+pub fn teen_sum(a: i32, b: i32) -> i32 {
+    if a >= 13 && a <= 19 || b >= 13 && b <= 19 {
+        return 19;
+    }
+    return a + b;
+}

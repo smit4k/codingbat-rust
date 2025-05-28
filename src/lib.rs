@@ -127,4 +127,11 @@ mod tests {
         assert_eq!(two_as_one(3, 1, 2), true);
         assert_eq!(two_as_one(3, 2, 2), false);
     }
+
+    #[test]
+    fn test_teen_sum() {
+        assert_eq!(teen_sum(3, 4), 7);
+        assert_eq!(teen_sum(10, 13), 19);
+        assert_eq!(teen_sum(13, 2), 19);
+    }
 }
