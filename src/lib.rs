@@ -1,8 +1,13 @@
 pub mod warmups;
+pub mod logic1;
 
 #[cfg(test)]
 mod tests {
     use crate::warmups::*;
+    use crate::logic1::*;
+
+
+    // Warmup tests
 
     #[test]
     fn test_diff21() {
@@ -96,5 +101,23 @@ mod tests {
         assert_eq!(near_hundred(89), false);
         assert_eq!(near_hundred(198), true);
         assert_eq!(near_hundred(178), false);
+    }
+
+    // Logic 1 tests
+    #[test]
+    fn test_love6() {
+        assert_eq!(love6(6, 4), true);
+        assert_eq!(love6(4, 5), false);
+        assert_eq!(love6(1, 5), true);
+        assert_eq!(love6(9, 3), true);
+    }
+
+    #[test]
+    fn test_more20() {
+        assert_eq!(more20(20), false);
+        assert_eq!(more20(21), true);
+        assert_eq!(more20(22), true);
+        assert_eq!(more20(81), true);
+        assert_eq!(more20(124), false);
     }
 }
