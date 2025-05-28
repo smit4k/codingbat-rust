@@ -1,27 +1,23 @@
 pub fn diff21(n: i32) -> i32 {
     if n > 21 {
-        return 2*((n-21).abs());
+        2*((n-21).abs())
     }
     else {
-        return (n-21).abs();
+        (n-21).abs()
     }
 }
 
 pub fn sum_double(a: i32, b: i32) -> i32 {
     if a == b {
-        return 2*(a+b);
+        2*(a+b)
     }
-    return a+b;
+    else {
+        a+b
+    }
 }
 
 pub fn makes_ten(a: i32, b:i32) -> bool {
-    if a == 10 || b == 10 {
-        return true;
-    }
-    if a+b == 10 {
-        return true;
-    }
-    return false;
+    a == 10 || b == 10 || a + b == 10
 }
 
 pub fn close10(a:i32, b:i32) -> i32 {
@@ -41,10 +37,10 @@ pub fn close10(a:i32, b:i32) -> i32 {
 
 pub fn or35(n:u32) -> bool {
     if n % 3 == 0 || n % 5 == 0 {
-        return true;
+        true
     }
     else {
-        return false;
+        false
     }
 }
 
@@ -82,19 +78,16 @@ pub fn max1020(a:i32, b:i32) -> i32 {
 }
 
 pub fn icy_hot(temp1:i32, temp2:i32) -> bool {
-    if (temp1 < 0 && temp2 > 100) || (temp2 < 0 && temp1 > 100) {
-        return true;
-    }
-    return false;
+    (temp1 < 0 && temp2 > 100) || (temp2 < 0 && temp1 > 100)
 }
 
 pub fn pos_neg(a:i32, b:i32, negative:bool) -> bool {
     if !negative {
         if (a < 0 && b > 0) || (a > 0 && b < 0) {
-            return true;
+            true
         }
         else {
-            return false;
+            false
         }
     }
     else {
