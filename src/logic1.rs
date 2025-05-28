@@ -2,7 +2,7 @@
 /// Given two int values, `a` and `b`, return `true` if either one is 6. 
 /// Or if their sum or difference is 6.
 ///
-/// # Examples
+/// # Test Cases
 ///
 /// ```
 /// use codingbat_rust::logic1::love6;
@@ -17,7 +17,7 @@ pub fn love6(a: i32, b: i32) -> bool {
 
 /// Return `true` if the given non-negative number is 1 or 2 more than a multiple of 20.
 ///
-/// # Examples
+/// # Test Cases
 ///
 /// ```
 /// use codingbat_rust::logic1::more20;
@@ -33,7 +33,7 @@ pub fn more20(n: u32) -> bool {
 /// Given three integers `a`, `b`, and `c`, returns `true` if it is possible 
 /// to add two of the integers to get the third.
 ///
-/// # Examples
+/// # Test Cases
 ///
 /// ```
 /// use codingbat_rust::logic1::two_as_one;
@@ -49,7 +49,7 @@ pub fn two_as_one(a: i32, b: i32, c: i32) -> bool {
 /// Given 2 ints, `a` and `b`, return their sum. However, "teen" values in the range 13..19 inclusive, are extra lucky. 
 /// So if either value is a teen, just return 19. 
 ///
-/// # Examples
+/// # Test Cases
 ///
 /// ```
 /// use codingbat_rust::logic1::teen_sum;
@@ -69,7 +69,7 @@ pub fn teen_sum(a: i32, b: i32) -> i32 {
 
 /// Return `true` if the given non-negative number is a multiple of 3 or 5, but not both.
 ///
-/// # Examples
+/// # Test Cases
 ///
 /// ```
 /// use codingbat_rust::logic1::old35;
@@ -87,7 +87,7 @@ pub fn old35(n: u32) -> bool {
 /// If all of the numbers are the same, the result is 20.
 /// If two of the numbers are the same, the result is 10.
 /// 
-/// # Examples
+/// # Test Cases
 /// 
 /// ```
 /// use codingbat_rust::logic1::green_ticket;
@@ -113,7 +113,7 @@ pub fn green_ticket(a: i32, b: i32, c: i32) -> i32 {
 /// However, if either tea or candy is at least double the amount of the other one, the party is great (2).
 /// However, in all cases, if either tea or candy is less than 5, the party is always bad (0).
 /// 
-/// # Examples
+/// # Test Cases
 /// 
 /// ```
 /// use codingbat_rust::logic1::tea_party;
@@ -139,7 +139,7 @@ pub fn tea_party(tea: i32, candy: i32) -> i32 {
 /// Unless it is the weekend, in which case there is no upper bound on the number of cigars. 
 /// Return `true` if the party with the given values is successful, or `false` otherwise.
 /// 
-/// # Examples
+/// # Test Cases
 /// 
 /// ```
 /// use codingbat_rust::logic1::cigar_party;
