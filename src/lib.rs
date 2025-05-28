@@ -120,4 +120,11 @@ mod tests {
         assert_eq!(more20(81), true);
         assert_eq!(more20(124), false);
     }
+
+    #[test]
+    fn test_two_as_one() {
+        assert_eq!(two_as_one(1, 2, 3), true);
+        assert_eq!(two_as_one(3, 1, 2), true);
+        assert_eq!(two_as_one(3, 2, 2), false);
+    }
 }

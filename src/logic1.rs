@@ -11,3 +11,7 @@ pub fn more20(n: u32) -> bool {
     }
     return false;
 }
+
+pub fn two_as_one(a: i32, b: i32, c: i32) -> bool {
+    a + b == c || a + c == b || b + c == a
+}
