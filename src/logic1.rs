@@ -163,7 +163,7 @@ pub fn cigar_party(cigars: i32, is_weekend: bool) -> bool {
 /// The `%` (modulo) operator is used to compute the remainder,
 /// e.g., `17 % 10` is `7`.
 ///
-/// # Examples
+/// # Test Cases
 ///
 /// ```
 /// use codingbat_rust::logic1::last_digit;
