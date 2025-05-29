@@ -156,3 +156,26 @@ pub fn cigar_party(cigars: i32, is_weekend: bool) -> bool {
         cigars >= 40 && cigars <= 60
     }
 }
+
+
+/// Given three non-negative integers `a`, `b`, and `c`,
+/// return `true` if two or more of them have the same rightmost digit.
+/// The `%` (modulo) operator is used to compute the remainder,
+/// e.g., `17 % 10` is `7`.
+///
+/// # Examples
+///
+/// ```
+/// use codingbat_rust::logic1::last_digit;
+///
+/// assert_eq!(last_digit(23, 19, 13), true);
+/// assert_eq!(last_digit(23, 19, 12), false);
+/// assert_eq!(last_digit(23, 19, 3), true);
+/// ```
+pub fn last_digit(a: i32, b: i32, c: i32) -> bool {
+    let a_rmd = a % 10;
+    let b_rmd = b % 10;
+    let c_rmd = c % 10;
+
+    a_rmd == b_rmd || a_rmd == c_rmd || b_rmd == c_rmd
+}

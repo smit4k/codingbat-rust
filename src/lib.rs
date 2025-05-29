@@ -162,4 +162,11 @@ mod tests {
         assert_eq!(cigar_party(50, false), true);
         assert_eq!(cigar_party(70, true), true);
     }
+
+    #[test]
+    fn test_last_digit() {
+        assert_eq!(last_digit(23, 19, 13), true);
+        assert_eq!(last_digit(23, 19, 12), false);
+        assert_eq!(last_digit(23, 19, 3), true);
+    }
 }
