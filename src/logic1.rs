@@ -179,3 +179,33 @@ pub fn last_digit(a: i32, b: i32, c: i32) -> bool {
 
     a_rmd == b_rmd || a_rmd == c_rmd || b_rmd == c_rmd
 }
+
+
+/// You have a red lottery ticket showing ints `a`, `b`, and `c`, each of which is 0, 1, or 2. 
+/// If they are all the value 2, the result is 10. Otherwise if they are all the same, the result is 5. 
+/// Otherwise so long as both `b` and `c` are different from `a`, the result is 1. 
+/// Otherwise the result is 0.
+/// 
+/// Test Cases
+/// 
+/// ```
+/// use codingbat_rust::logic1::red_ticket;
+/// 
+/// assert_eq!(red_ticket(2, 2, 2), 10);
+/// assert_eq!(red_ticket(2, 2, 1), 0);
+/// assert_eq!(red_ticket(0, 0, 0), 5);
+/// ```
+pub fn red_ticket(a: i32, b: i32, c: i32) -> i32 {
+    if a == 2 && b == 2 && c == 2 {
+        10
+    }
+    else if a == b && b == c {
+        5
+    }
+    else if b != a && c != a  {
+        1
+    }
+    else {
+        0
+    }
+}

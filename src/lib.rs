@@ -169,4 +169,11 @@ mod tests {
         assert_eq!(last_digit(23, 19, 12), false);
         assert_eq!(last_digit(23, 19, 3), true);
     }
+
+    #[test]
+    fn test_red_ticket() {
+        assert_eq!(red_ticket(2, 2, 2), 10);
+        assert_eq!(red_ticket(2, 2, 1), 0);
+        assert_eq!(red_ticket(0, 0, 0), 5);
+    }
 }
