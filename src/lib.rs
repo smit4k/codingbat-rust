@@ -1,10 +1,12 @@
 pub mod warmups;
 pub mod logic1;
+pub mod array1;
 
 #[cfg(test)]
 mod tests {
     use crate::warmups::*;
     use crate::logic1::*;
+    use crate::array1::*;
 
 
     // Warmup tests
@@ -104,6 +106,7 @@ mod tests {
     }
 
     // Logic 1 tests
+
     #[test]
     fn test_love6() {
         assert_eq!(love6(6, 4), true);
@@ -175,5 +178,21 @@ mod tests {
         assert_eq!(red_ticket(2, 2, 2), 10);
         assert_eq!(red_ticket(2, 2, 1), 0);
         assert_eq!(red_ticket(0, 0, 0), 5);
+    }
+
+    // Array 1 tests
+
+    #[test]
+    fn test_first_last6() {
+        assert_eq!(first_last6(&[1, 3, 6]), true);
+        assert_eq!(first_last6(&[6, 1, 2, 3]), true);
+        assert_eq!(first_last6(&[13, 6, 1, 2, 3]), false);
+    }
+
+    #[test]
+    fn test_common_end() {
+        assert_eq!(common_end(&[1, 2, 3], &[7, 3]), true);
+        assert_eq!(common_end(&[1, 2, 3], &[7, 3, 2]), false);
+        assert_eq!(common_end(&[1, 2, 3], &[1, 3]), true);
     }
 }
