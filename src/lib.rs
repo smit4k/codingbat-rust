@@ -195,4 +195,13 @@ mod tests {
         assert_eq!(common_end(&[1, 2, 3], &[7, 3, 2]), false);
         assert_eq!(common_end(&[1, 2, 3], &[1, 3]), true);
     }
+
+    #[test]
+    fn test_double23() {
+        assert_eq!(double23(&[2, 2]), true);
+        assert_eq!(double23(&[3, 3]), true);
+        assert_eq!(double23(&[2, 3]), false);
+        assert_eq!(double23(&[]), false);
+        assert_eq!(double23(&[2]), false);
+    }
 }

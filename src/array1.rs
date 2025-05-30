@@ -41,3 +41,26 @@ pub fn common_end(a: &[i32], b: &[i32]) -> bool {
 pub fn make_pi() -> [i32; 3] {
     [3, 1, 4]
 }
+
+/// Given an integer slice `nums` of length 0, 1, or 2,
+/// return `true` if the array contains the number 2 twice or the number 3 twice.
+///
+/// # Examples
+///
+/// ```
+/// use codingbat_rust::list1::double23;
+///
+/// assert_eq!(double23(&[2, 2]), true);
+/// assert_eq!(double23(&[3, 3]), true);
+/// assert_eq!(double23(&[2, 3]), false);
+/// assert_eq!(double23(&[]), false);
+/// assert_eq!(double23(&[2]), false);
+/// ```
+pub fn double23(nums: &[i32]) -> bool {
+    if nums.len() == 2 {
+        nums == [2, 2] || nums == [3, 3]
+    }
+    else {
+        false
+    }
+}
