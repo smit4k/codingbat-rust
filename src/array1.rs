@@ -16,9 +16,10 @@ pub fn first_last6(nums: &[i32]) -> bool {
 /// Given 2 arrays of ints, a and b, return `true` if they have the same first element or they have the same last element. 
 /// Both arrays will be length 1 or more.
 /// 
-/// Test Cases
+/// # Test Cases
 /// ```
 /// use codingbat_rust::array1::common_end;
+/// 
 /// assert_eq!(common_end(&[1, 2, 3], &[7, 3]), true);
 /// assert_eq!(common_end(&[1, 2, 3], &[7, 3, 2]), false);
 /// assert_eq!(common_end(&[1, 2, 3], &[1, 3]), true);
@@ -26,4 +27,17 @@ pub fn first_last6(nums: &[i32]) -> bool {
 /// ```
 pub fn common_end(a: &[i32], b: &[i32]) -> bool {
     a[0] == b[0] || a[a.len()-1] == b[b.len()-1]
+}
+
+/// Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}
+/// 
+/// # Test Cases
+/// ```
+/// use codingbat_rust::array1::make_pi;
+/// 
+/// assert_eq!(make_pi(), [3, 1, 4])
+/// ``` 
+/// 
+pub fn make_pi() -> [i32; 3] {
+    [3, 1, 4]
 }
