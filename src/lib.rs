@@ -204,4 +204,11 @@ mod tests {
         assert_eq!(double23(&[]), false);
         assert_eq!(double23(&[2]), false);
     }
+
+    #[test]
+    fn test_same_first_last() {
+        assert_eq!(same_first_last(&[1, 2, 3]), false);
+        assert_eq!(same_first_last(&[1, 2, 3, 1]), true);
+        assert_eq!(same_first_last(&[1, 2, 1]), true);
+    }
 }

@@ -64,3 +64,21 @@ pub fn double23(nums: &[i32]) -> bool {
         false
     }
 }
+
+
+/// Given an array of ints, 
+/// return true if the array is length 1 or more, 
+/// and the first element and the last element are equal.
+/// 
+/// Test Cases
+/// 
+/// ```
+/// use codingbat_rust::array1::same_first_last;
+/// 
+/// assert_eq!(same_first_last(&[1, 2, 3]), false);
+/// assert_eq!(same_first_last(&[1, 2, 3, 1]), true);
+/// assert_eq!(same_first_last(&[1, 2, 1]), true);
+/// ```
+pub fn same_first_last(nums: &[i32]) -> bool {
+    nums.len() >= 1 && nums[0] == nums[nums.len()-1]
+}
