@@ -45,7 +45,7 @@ pub fn make_pi() -> [i32; 3] {
 /// Given an integer slice `nums` of length 0, 1, or 2,
 /// return `true` if the array contains the number 2 twice or the number 3 twice.
 ///
-/// # Examples
+/// # Test Cases
 ///
 /// ```
 /// use codingbat_rust::array1::double23;
