@@ -211,4 +211,11 @@ mod tests {
         assert_eq!(same_first_last(&[1, 2, 3, 1]), true);
         assert_eq!(same_first_last(&[1, 2, 1]), true);
     }
+
+    #[test]
+    fn test_reverse3() {
+        assert_eq!(reverse3([1, 2, 3]), [3, 2, 1]);
+        assert_eq!(reverse3([5, 11, 9]), [9, 11, 5]);
+        assert_eq!(reverse3([7, 0, 0]), [0, 0, 7]);
+    }
 }
