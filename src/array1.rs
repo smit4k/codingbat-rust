@@ -48,7 +48,7 @@ pub fn make_pi() -> [i32; 3] {
 /// # Examples
 ///
 /// ```
-/// use codingbat_rust::list1::double23;
+/// use codingbat_rust::array1::double23;
 ///
 /// assert_eq!(double23(&[2, 2]), true);
 /// assert_eq!(double23(&[3, 3]), true);
