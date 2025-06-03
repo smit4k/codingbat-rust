@@ -101,3 +101,19 @@ pub fn reverse3(nums: [i32; 3]) -> [i32; 3] {
     nums2.reverse();
     nums2
 }
+/// Given an int array of any length, return a new array of its first 2 elements. 
+/// If the array is smaller than length 2, 
+/// use whatever elements are present.
+/// 
+/// Test Cases
+/// 
+/// ```
+/// use codingbat_rust::array1::front_piece;
+/// 
+/// assert_eq!(front_piece(&[1, 2, 3]), [1, 2]);
+/// assert_eq!(front_piece(&[1, 2]), [1, 2]);
+/// assert_eq!(front_piece(&[1]), [1]);   
+/// ```
+pub fn front_piece(nums: &[i32]) -> Vec<i32> {
+    nums.iter().take(2).cloned().collect()
+}

@@ -218,4 +218,11 @@ mod tests {
         assert_eq!(reverse3([5, 11, 9]), [9, 11, 5]);
         assert_eq!(reverse3([7, 0, 0]), [0, 0, 7]);
     }
+
+    #[test]
+    fn test_front_piece() {
+        assert_eq!(front_piece(&[1, 2, 3]), [1, 2]);
+        assert_eq!(front_piece(&[1, 2]), [1, 2]);
+        assert_eq!(front_piece(&[1]), [1]);   
+    }
 }
