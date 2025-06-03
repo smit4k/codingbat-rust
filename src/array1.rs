@@ -82,6 +82,7 @@ pub fn double23(nums: &[i32]) -> bool {
 pub fn same_first_last(nums: &[i32]) -> bool {
     nums.len() >= 1 && nums[0] == nums[nums.len()-1]
 }
+
 /// Given an array of ints length 3,
 /// return a new array with the elements in reverse order, 
 /// so {1, 2, 3} becomes {3, 2, 1}.
@@ -95,12 +96,12 @@ pub fn same_first_last(nums: &[i32]) -> bool {
 /// assert_eq!(reverse3([5, 11, 9]), [9, 11, 5]);
 /// assert_eq!(reverse3([7, 0, 0]), [0, 0, 7]);
 /// ```
-
 pub fn reverse3(nums: [i32; 3]) -> [i32; 3] {
     let mut nums2 = nums;
     nums2.reverse();
     nums2
 }
+
 /// Given an int array of any length, return a new array of its first 2 elements. 
 /// If the array is smaller than length 2, 
 /// use whatever elements are present.
