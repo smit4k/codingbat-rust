@@ -117,3 +117,17 @@ pub fn reverse3(nums: [i32; 3]) -> [i32; 3] {
 pub fn front_piece(nums: &[i32]) -> Vec<i32> {
     nums.iter().take(2).cloned().collect()
 }
+
+pub fn front11(a: &[i32], b: &[i32]) -> Vec<i32> {
+    let mut result = Vec::new();
+
+    if let Some(&first_a) = a.first() {
+        result.push(first_a);
+    }
+
+    if let Some(&first_b) = b.first() {
+        result.push(first_b);
+    }
+
+    result
+}

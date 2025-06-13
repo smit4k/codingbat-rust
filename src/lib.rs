@@ -225,4 +225,11 @@ mod tests {
         assert_eq!(front_piece(&[1, 2]), [1, 2]);
         assert_eq!(front_piece(&[1]), [1]);   
     }
+
+    #[test]
+    fn test_front11() {
+        assert_eq!(front11(&[1, 2, 3], &[7, 8, 9]), [1, 7]);
+        assert_eq!(front11(&[1], &[2]), [1, 2]);
+        assert_eq!(front11(&[1, 7], &[]), [1]);    
+    }
 }
