@@ -247,7 +247,9 @@ pub fn blue_ticket(a: i32, b: i32, c: i32) -> i32 {
 /// ```
 /// use codingbat_rust::logic1::in_order;
 /// 
-/// 
+/// assert_eq!(in_order(1, 2, 4, false), true);
+/// assert_eq!(in_order(1, 2, 1, false), false);
+/// assert_eq!(in_order(1, 1, 2, true), true);
 /// ```
 pub fn in_order(a: i32, b: i32, c: i32, b_ok: bool) -> bool {
     (b_ok || b > a) && c > b
