@@ -181,6 +181,13 @@ mod tests {
         assert_eq!(red_ticket(2, 2, 1), 0);
         assert_eq!(red_ticket(0, 0, 0), 5);
     }
+    
+    #[test]
+    fn test_blue_ticket() {
+        assert_eq!(blue_ticket(9, 1, 0), 10);
+        assert_eq!(blue_ticket(9, 2, 0), 0);
+        assert_eq!(blue_ticket(6, 1, 4), 10);
+    }
 
     // Array 1 tests
 

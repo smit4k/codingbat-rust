@@ -107,6 +107,7 @@ pub fn green_ticket(a: i32, b: i32, c: i32) -> i32 {
         0
     }
 }
+
 /// We are having a party with amounts of tea and candy. 
 /// Return the int outcome of the party encoded as 0=bad, 1=good, or 2=great. 
 /// A party is good (1) if both tea and candy are at least 5.
@@ -157,7 +158,6 @@ pub fn cigar_party(cigars: i32, is_weekend: bool) -> bool {
     }
 }
 
-
 /// Given three non-negative integers `a`, `b`, and `c`,
 /// return `true` if two or more of them have the same rightmost digit.
 /// The `%` (modulo) operator is used to compute the remainder,
@@ -179,7 +179,6 @@ pub fn last_digit(a: i32, b: i32, c: i32) -> bool {
 
     a_rmd == b_rmd || a_rmd == c_rmd || b_rmd == c_rmd
 }
-
 
 /// You have a red lottery ticket showing ints `a`, `b`, and `c`, each of which is 0, 1, or 2. 
 /// If they are all the value 2, the result is 10. Otherwise if they are all the same, the result is 5. 
@@ -206,6 +205,36 @@ pub fn red_ticket(a: i32, b: i32, c: i32) -> i32 {
         1
     }
     else {
+        0
+    }
+}
+
+/// You have a blue lottery ticket, with ints a, b, and c on it. 
+/// This makes three pairs, which we'll call ab, bc, and ac. 
+/// Consider the sum of the numbers in each pair. 
+/// If any pair sums to exactly 10, the result is 10. 
+/// Otherwise if the ab sum is exactly 10 more than either bc or ac sums, the result is 5. 
+/// Otherwise the result is 0.
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::logic1::blue_ticket;
+/// 
+/// assert_eq!(blue_ticket(9, 1, 0), 10);
+/// assert_eq!(blue_ticket(9, 2, 0), 0);
+/// assert_eq!(blue_ticket(6, 1, 4), 10);
+/// ```
+pub fn blue_ticket(a: i32, b: i32, c: i32) -> i32 {
+    let ab = a + b;
+    let bc = b + c;
+    let ac = a + c;
+
+    if ab == 10 || bc == 10 || ac == 10 {
+        10
+    } else if ab == bc + 10 || ab == ac + 10 {
+        5
+    } else {
         0
     }
 }
