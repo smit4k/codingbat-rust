@@ -185,7 +185,7 @@ pub fn last_digit(a: i32, b: i32, c: i32) -> bool {
 /// Otherwise so long as both `b` and `c` are different from `a`, the result is 1. 
 /// Otherwise the result is 0.
 /// 
-/// Test Cases
+/// # Test Cases
 /// 
 /// ```
 /// use codingbat_rust::logic1::red_ticket;
