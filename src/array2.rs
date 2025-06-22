@@ -2,6 +2,7 @@
 /// Note: the `%` "mod" operator computes the remainder, e.g. `5 % 2` is `1`.
 ///
 /// # Test Cases
+/// 
 /// ```
 /// use codingbat_rust::array2::count_evens;
 /// 
@@ -17,6 +18,7 @@ pub fn count_evens(nums: &[i32]) -> u32 {
 /// Except the number 13 is very unlucky, so it does not count and numbers that come immediately after a 13 also do not count.
 /// 
 /// # Test Cases
+/// 
 /// ```
 /// use codingbat_rust::array2::sum13;
 /// 
@@ -48,6 +50,7 @@ pub fn sum13(nums: &[i32]) -> i32 {
 /// Given an array of ints, return `true` if the array contains no 1's and no 3's.
 /// 
 /// # Test Cases
+/// 
 /// ```
 /// use codingbat_rust::array2::lucky13;
 /// 
