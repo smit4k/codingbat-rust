@@ -8,8 +8,8 @@ This repository contains idiomatic Rust solutions for CodingBat exercises, organ
 
 ## Structure
 
-- `src/` — Rust source files grouped by problem set
-- [``src/lib.rs``](src/lib.rs) — Unit tests for each solution
+- [`src/`](src/) — Rust source files grouped by problem set
+- [`src/lib.rs`](src/lib.rs) — Unit tests for each solution
 
 ## Getting Started
 
