@@ -4,7 +4,7 @@ A collection of Rust solutions for [CodingBat](https://codingbat.com/) programmi
 
 ## Overview
 
-This repository contains idiomatic Rust implementations for CodingBat exercises, organized by topic
+This repository contains idiomatic Rust solutions for CodingBat exercises, organized by topic
 
 ## Structure
 
