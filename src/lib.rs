@@ -1,12 +1,14 @@
 pub mod warmups;
 pub mod logic1;
 pub mod array1;
+pub mod array2;
 
 #[cfg(test)]
 mod tests {
     use crate::warmups::*;
     use crate::logic1::*;
     use crate::array1::*;
+    use crate::array2::*;
 
 
     // Warmup tests
@@ -231,5 +233,14 @@ mod tests {
         assert_eq!(front11(&[1, 2, 3], &[7, 8, 9]), [1, 7]);
         assert_eq!(front11(&[1], &[2]), [1, 2]);
         assert_eq!(front11(&[1, 7], &[]), [1]);    
+    }
+
+    // Array 2 Tests
+
+    #[test]
+    fn test_count_evens() {
+        assert_eq!(count_evens(&[2, 1, 2, 3, 4,]), 3);
+        assert_eq!(count_evens(&[2, 2, 0]), 3);
+        assert_eq!(count_evens(&[1, 3, 5]), 0);
     }
 }
