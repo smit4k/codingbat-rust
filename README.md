@@ -27,4 +27,4 @@ This repository contains idiomatic Rust implementations for CodingBat exercises,
 ## Contributing
 
 Contributions are welcome! Please open issues or pull requests for improvements or new exercises.
-I would **highly appreciate it** if you would add documentation for the exercises, following the documentation I have already made for some exercises
+I would **highly appreciate it** if you would add solutions to exercises and documentation for the exercises
