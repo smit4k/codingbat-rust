@@ -250,4 +250,11 @@ mod tests {
         assert_eq!(sum13(&[1, 1]), 2);
         assert_eq!(sum13(&[1, 2, 2, 1, 13]), 6);
     }
+
+    #[test]
+    fn test_lucky13() {
+        assert_eq!(lucky13(&[0, 2, 4]), true);
+        assert_eq!(lucky13(&[1, 2, 3]), false);
+        assert_eq!(lucky13(&[1, 2, 4]), false);
+    }
 }

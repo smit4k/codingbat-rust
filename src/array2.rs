@@ -13,7 +13,6 @@ pub fn count_evens(nums: &[i32]) -> u32 {
     nums.iter().filter(|&n| n % 2 == 0).count() as u32
 }
 
-
 /// Return the sum of the numbers in the array, returning 0 for an empty array. 
 /// Except the number 13 is very unlucky, so it does not count and numbers that come immediately after a 13 also do not count.
 /// 
@@ -44,4 +43,18 @@ pub fn sum13(nums: &[i32]) -> i32 {
     }
 
     sum
+}
+
+/// Given an array of ints, return `true` if the array contains no 1's and no 3's.
+/// 
+/// # Test Cases
+/// ```
+/// use codingbat_rust::array2::lucky13;
+/// 
+/// assert_eq!(lucky13(&[0, 2, 4]), true);
+/// assert_eq!(lucky13(&[1, 2, 3]), false);
+/// assert_eq!(lucky13(&[1, 2, 4]), false);
+/// ```
+pub fn lucky13(nums: &[i32]) -> bool {
+    nums.iter().all(|&n| n != 1 && n != 3)
 }
