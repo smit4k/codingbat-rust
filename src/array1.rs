@@ -146,3 +146,27 @@ pub fn front11(a: &[i32], b: &[i32]) -> Vec<i32> {
 
     result
 }
+
+/// Given an array of ints, swap the first and last elements in the array. 
+/// Return the modified array. The array length will be at least 1.
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::array1::swap_ends;
+/// 
+/// assert_eq!(swap_ends(&[1, 2, 3, 4]), [4, 2, 3, 1]);
+/// assert_eq!(swap_ends(&[1, 2, 3]), [3, 2, 1]);
+/// assert_eq!(swap_ends(&[8, 6, 7, 9, 5]), [5, 6, 7, 9, 8]);
+/// ```
+pub fn swap_ends(nums: &[i32]) -> Vec<i32> {
+    let mut result = nums.to_vec();
+
+    if result.len() > 1 {
+        let last_index = result.len() - 1;
+        result.swap(0, last_index);
+    }
+
+    result
+}
+

@@ -195,7 +195,7 @@ mod tests {
         assert_eq!(in_order(1, 2, 1, false), false);
         assert_eq!(in_order(1, 1, 2, true), true);
     }
-    
+
     // Array 1 tests
 
     #[test]
@@ -247,6 +247,13 @@ mod tests {
         assert_eq!(front11(&[1, 2, 3], &[7, 8, 9]), [1, 7]);
         assert_eq!(front11(&[1], &[2]), [1, 2]);
         assert_eq!(front11(&[1, 7], &[]), [1]);    
+    }
+
+    #[test]
+    fn test_swap_ends() {
+        assert_eq!(swap_ends(&[1, 2, 3, 4]), [4, 2, 3, 1]);
+        assert_eq!(swap_ends(&[1, 2, 3]), [3, 2, 1]);
+        assert_eq!(swap_ends(&[8, 6, 7, 9, 5]), [5, 6, 7, 9, 8]);
     }
 
     // Array 2 Tests
