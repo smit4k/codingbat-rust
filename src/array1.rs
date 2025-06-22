@@ -72,7 +72,7 @@ pub fn double23(nums: &[i32]) -> bool {
 /// return true if the array is length 1 or more, 
 /// and the first element and the last element are equal.
 /// 
-/// Test Cases
+/// # Test Cases
 /// 
 /// ```
 /// use codingbat_rust::array1::same_first_last;
@@ -89,7 +89,7 @@ pub fn same_first_last(nums: &[i32]) -> bool {
 /// return a new array with the elements in reverse order, 
 /// so {1, 2, 3} becomes {3, 2, 1}.
 /// 
-/// Test Cases
+/// # Test Cases
 /// 
 /// ```
 /// use codingbat_rust::array1::reverse3;
@@ -108,7 +108,7 @@ pub fn reverse3(nums: [i32; 3]) -> [i32; 3] {
 /// If the array is smaller than length 2, 
 /// use whatever elements are present.
 /// 
-/// Test Cases
+/// # Test Cases
 /// 
 /// ```
 /// use codingbat_rust::array1::front_piece;
@@ -121,6 +121,18 @@ pub fn front_piece(nums: &[i32]) -> Vec<i32> {
     nums.iter().take(2).cloned().collect()
 }
 
+/// Given 2 int arrays, a and b, of any length, return a new array with the first element of each array. 
+/// If either array is length 0, ignore that array.
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::array1::front11;
+/// 
+/// assert_eq!(front11(&[1, 2, 3], &[7, 8, 9]), [1, 7]);
+/// assert_eq!(front11(&[1], &[2]), [1, 2]);
+/// assert_eq!(front11(&[1, 7], &[]), [1]);    
+/// ```
 pub fn front11(a: &[i32], b: &[i32]) -> Vec<i32> {
     let mut result = Vec::new();
 
