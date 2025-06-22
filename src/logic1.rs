@@ -238,3 +238,17 @@ pub fn blue_ticket(a: i32, b: i32, c: i32) -> i32 {
         0
     }
 }
+
+/// Given three ints, a b c, return `true` if b is greater than a, and c is greater than b. 
+/// However, with the exception that if "bOk" is `true`, b does not need to be greater than a.
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::logic1::in_order;
+/// 
+/// 
+/// ```
+pub fn in_order(a: i32, b: i32, c: i32, b_ok: bool) -> bool {
+    (b_ok || b > a) && c > b
+}

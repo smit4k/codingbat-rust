@@ -189,6 +189,13 @@ mod tests {
         assert_eq!(blue_ticket(6, 1, 4), 10);
     }
 
+    #[test]
+    fn test_in_order() {
+        assert_eq!(in_order(1, 2, 4, false), true);
+        assert_eq!(in_order(1, 2, 1, false), false);
+        assert_eq!(in_order(1, 1, 2, true), true);
+    }
+    
     // Array 1 tests
 
     #[test]
