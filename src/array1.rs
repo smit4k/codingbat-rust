@@ -2,6 +2,7 @@
 /// The array will be length 1 or more.
 /// 
 /// # Test Cases
+/// 
 /// ```
 /// use codingbat_rust::array1::first_last6;
 /// 
@@ -17,6 +18,7 @@ pub fn first_last6(nums: &[i32]) -> bool {
 /// Both arrays will be length 1 or more.
 /// 
 /// # Test Cases
+/// 
 /// ```
 /// use codingbat_rust::array1::common_end;
 /// 
@@ -32,6 +34,7 @@ pub fn common_end(a: &[i32], b: &[i32]) -> bool {
 /// Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}
 /// 
 /// # Test Cases
+/// 
 /// ```
 /// use codingbat_rust::array1::make_pi;
 /// 
