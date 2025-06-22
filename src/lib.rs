@@ -243,4 +243,11 @@ mod tests {
         assert_eq!(count_evens(&[2, 2, 0]), 3);
         assert_eq!(count_evens(&[1, 3, 5]), 0);
     }
+
+    #[test]
+    fn test_sum13() {
+        assert_eq!(sum13(&[1, 2, 2, 1]), 6);
+        assert_eq!(sum13(&[1, 1]), 2);
+        assert_eq!(sum13(&[1, 2, 2, 1, 13]), 6);
+    }
 }
