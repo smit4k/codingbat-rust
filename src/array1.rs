@@ -104,6 +104,21 @@ pub fn reverse3(nums: [i32; 3]) -> [i32; 3] {
     nums2
 }
 
+/// Given an int array length 2, return `true` if it does not contain a 2 or 3.
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::array1::no23;
+/// 
+/// assert_eq!(no23([4, 5]), true);
+/// assert_eq!(no23([4, 2]), false);
+/// assert_eq!(no23([3, 5]), false);
+/// ```
+pub fn no23(nums: [i32; 2]) -> bool {
+    nums.into_iter().all(|n| n != 2 && n!= 3)
+}
+
 /// Given an int array of any length, return a new array of its first 2 elements. 
 /// If the array is smaller than length 2, 
 /// use whatever elements are present.

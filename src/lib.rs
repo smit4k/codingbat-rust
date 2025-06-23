@@ -236,6 +236,13 @@ mod tests {
     }
 
     #[test]
+    fn test_no23() {
+        assert_eq!(no23([4, 5]), true);
+        assert_eq!(no23([4, 2]), false);
+        assert_eq!(no23([3, 5]), false);
+    }
+
+    #[test]
     fn test_front_piece() {
         assert_eq!(front_piece(&[1, 2, 3]), [1, 2]);
         assert_eq!(front_piece(&[1, 2]), [1, 2]);
