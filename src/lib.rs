@@ -250,6 +250,13 @@ mod tests {
     }
 
     #[test]
+    fn test_mid_three() {
+        assert_eq!(mid_three(&[1, 2, 3, 4, 5]), [2, 3, 4]);
+        assert_eq!(mid_three(&[8, 6, 7, 5, 3, 0, 9]), [7, 5, 3]);
+        assert_eq!(mid_three(&[1, 2, 3]), [1, 2, 3]);
+    }
+
+    #[test]
     fn test_front_piece() {
         assert_eq!(front_piece(&[1, 2, 3]), [1, 2]);
         assert_eq!(front_piece(&[1, 2]), [1, 2]);

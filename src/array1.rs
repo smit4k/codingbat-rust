@@ -119,6 +119,24 @@ pub fn middle_way(a: [i32; 3], b: [i32; 3]) -> [i32; 2] {
     [a[1], b[1]]
 }
 
+/// Given an array of ints of odd length, return a new array length 3 containing the elements from the middle of the array. 
+/// The array length will be at least 3.
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::array1::mid_three;
+/// 
+/// assert_eq!(mid_three(&[1, 2, 3, 4, 5]), [2, 3, 4]);
+/// assert_eq!(mid_three(&[8, 6, 7, 5, 3, 0, 9]), [7, 5, 3]);
+/// assert_eq!(mid_three(&[1, 2, 3]), [1, 2, 3]);
+/// ```
+pub fn mid_three(nums: &[i32]) -> [i32; 3] {
+    let mid = nums.len() / 2;
+
+    [nums[mid-1], nums[mid], nums[mid+1]]
+}
+
 /// Given an int array length 2, return `true` if it does not contain a 2 or 3.
 /// 
 /// # Test Cases
