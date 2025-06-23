@@ -104,6 +104,21 @@ pub fn reverse3(nums: [i32; 3]) -> [i32; 3] {
     nums2
 }
 
+/// Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle elements.
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::array1::middle_way;
+/// 
+/// assert_eq!(middle_way([1, 2, 3], [4, 5, 6]), [2, 5]);
+/// assert_eq!(middle_way([7, 7, 7], [3, 8, 0]), [7, 8]);
+/// assert_eq!(middle_way([5, 2, 9], [1, 4, 5]), [2, 4]);
+/// ```
+pub fn middle_way(a: [i32; 3], b: [i32; 3]) -> [i32; 2] {
+    [a[1], b[1]]
+}
+
 /// Given an int array length 2, return `true` if it does not contain a 2 or 3.
 /// 
 /// # Test Cases

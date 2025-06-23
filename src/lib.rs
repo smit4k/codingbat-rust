@@ -236,6 +236,13 @@ mod tests {
     }
 
     #[test]
+    fn test_middle_way() {
+        assert_eq!(middle_way([1, 2, 3], [4, 5, 6]), [2, 5]);
+        assert_eq!(middle_way([7, 7, 7], [3, 8, 0]), [7, 8]);
+        assert_eq!(middle_way([5, 2, 9], [1, 4, 5]), [2, 4]);
+    }
+
+    #[test]
     fn test_no23() {
         assert_eq!(no23([4, 5]), true);
         assert_eq!(no23([4, 2]), false);
