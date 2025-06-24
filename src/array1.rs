@@ -31,6 +31,18 @@ pub fn common_end(a: &[i32], b: &[i32]) -> bool {
     a[0] == b[0] || a[a.len()-1] == b[b.len()-1]
 }
 
+/// Given an array of ints of odd length, look at the first, last, and middle values in the array and return the largest. 
+/// The array length will be a least 1.
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::array1::max_triple;
+/// 
+/// assert_eq!(max_triple(&[1, 2, 3]), 3);
+/// assert_eq!(max_triple(&[1, 5, 3]), 5);
+/// assert_eq!(max_triple(&[5, 2, 3]), 5);
+/// ```
 pub fn max_triple(nums: &[i32]) -> i32 {
     let first = nums[0];
     let middle = nums[nums.len() / 2];
