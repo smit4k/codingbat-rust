@@ -31,6 +31,14 @@ pub fn common_end(a: &[i32], b: &[i32]) -> bool {
     a[0] == b[0] || a[a.len()-1] == b[b.len()-1]
 }
 
+pub fn max_triple(nums: &[i32]) -> i32 {
+    let first = nums[0];
+    let middle = nums[nums.len() / 2];
+    let last = nums[nums.len()-1];
+
+    first.max(middle).max(last)
+}
+
 /// Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}
 /// 
 /// # Test Cases

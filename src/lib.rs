@@ -213,6 +213,13 @@ mod tests {
     }
 
     #[test]
+    fn test_max_triple() {
+        assert_eq!(max_triple(&[1, 2, 3]), 3);
+        assert_eq!(max_triple(&[1, 5, 3]), 5);
+        assert_eq!(max_triple(&[5, 2, 3]), 5);
+    }
+
+    #[test]
     fn test_double23() {
         assert_eq!(double23(&[2, 2]), true);
         assert_eq!(double23(&[3, 3]), true);
