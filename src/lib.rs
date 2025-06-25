@@ -220,6 +220,13 @@ mod tests {
     }
 
     #[test]
+    fn test_rotate_left3() {
+        assert_eq!(rotate_left3([1, 2, 3]), [2, 3, 1]);
+        assert_eq!(rotate_left3([5, 11, 9]), [11, 9, 5]);
+        assert_eq!(rotate_left3([7, 0, 0]), [0, 0, 7]);
+    }
+
+    #[test]
     fn test_unlucky1() {
         assert_eq!(unlucky1(&[1, 3, 4, 5]), true);
         assert_eq!(unlucky1(&[2, 1, 3, 4, 5]), true);

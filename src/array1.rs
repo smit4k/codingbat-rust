@@ -65,6 +65,21 @@ pub fn make_pi() -> [i32; 3] {
     [3, 1, 4]
 }
 
+/// Given an array of ints length 3, return an array with the elements "rotated left" so `{1, 2, 3}` yields `{2, 3, 1}`.
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::array1::rotate_left3;
+/// 
+/// assert_eq!(rotate_left3([1, 2, 3]), [2, 3, 1]);
+/// assert_eq!(rotate_left3([5, 11, 9]), [11, 9, 5]);
+/// assert_eq!(rotate_left3([7, 0, 0]), [0, 0, 7]);
+/// ```
+pub fn rotate_left3(nums: [i32; 3]) -> [i32; 3] {
+    [nums[1], nums[2], nums[0]]
+}
+
 /// Given an integer slice `nums` of length 0, 1, or 2,
 /// return `true` if the array contains the number 2 twice or the number 3 twice.
 ///
