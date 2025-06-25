@@ -220,6 +220,13 @@ mod tests {
     }
 
     #[test]
+    fn test_unlucky1() {
+        assert_eq!(unlucky1(&[1, 3, 4, 5]), true);
+        assert_eq!(unlucky1(&[2, 1, 3, 4, 5]), true);
+        assert_eq!(unlucky1(&[1, 1, 1]), false);
+    }
+
+    #[test]
     fn test_double23() {
         assert_eq!(double23(&[2, 2]), true);
         assert_eq!(double23(&[3, 3]), true);
