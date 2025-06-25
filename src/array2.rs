@@ -101,7 +101,7 @@ pub fn pre4(nums: &[i32]) -> Vec<i32> {
     }
 }
 
-/// Given an array of ints, return true if every 2 that appears in the array is next to another 2
+/// Given an array of ints, return `true` if every 2 that appears in the array is next to another 2
 /// 
 /// # Test Cases
 /// 
