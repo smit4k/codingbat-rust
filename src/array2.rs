@@ -80,6 +80,27 @@ pub fn big_diff(nums: &[i32]) -> i32 {
     max - min
 }
 
+/// Given a non-empty array of ints, return a new array containing the elements from the original array that come before the first 4 in the original array. 
+/// The original array will contain at least one 4.
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::array2::pre4;
+/// 
+/// assert_eq!(pre4(&[1, 2, 4, 1]), [1, 2]);
+/// assert_eq!(pre4(&[3, 1, 4]), [3, 1]);
+/// assert_eq!(pre4(&[1, 4, 4]), [1]);
+/// ```
+pub fn pre4(nums: &[i32]) -> Vec<i32> {
+    if let Some(index) = nums.iter().position(|&x| x == 4) {
+        nums[..index].to_vec()
+    }
+    else {
+        vec![]
+    }
+}
+
 /// Given an array of ints, return true if every 2 that appears in the array is next to another 2
 /// 
 /// # Test Cases
@@ -102,6 +123,6 @@ pub fn two_two(nums: &[i32]) -> bool {
             }
         }
     }
-    
+
     true
 }

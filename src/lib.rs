@@ -329,6 +329,13 @@ mod tests {
     }
 
     #[test]
+    fn test_pre4() {
+        assert_eq!(pre4(&[1, 2, 4, 1]), [1, 2]);
+        assert_eq!(pre4(&[3, 1, 4]), [3, 1]);
+        assert_eq!(pre4(&[1, 4, 4]), [1]);
+    }
+
+    #[test]
     fn test_two_two() {
         assert_eq!(two_two(&[4, 2, 2, 3]), true);
         assert_eq!(two_two(&[2, 2, 4]), true);
