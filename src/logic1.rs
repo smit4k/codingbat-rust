@@ -254,3 +254,18 @@ pub fn blue_ticket(a: i32, b: i32, c: i32) -> i32 {
 pub fn in_order(a: i32, b: i32, c: i32, b_ok: bool) -> bool {
     (b_ok || b > a) && c > b
 }
+
+/// Given three ints, a b c, return `true` if one of them is 10 or more less than one of the others.
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::logic1::less_by_10;
+/// 
+/// assert_eq!(less_by_10(1, 7, 11), true);
+/// assert_eq!(less_by_10(1, 7, 10), false);
+/// assert_eq!(less_by_10(11, 1, 7), true); 
+/// ```
+pub fn less_by_10(a: i32, b: i32, c: i32) -> bool {
+    (a - b).abs() >= 10 || (a - c).abs() >= 10 || (b - c).abs() >= 10
+}

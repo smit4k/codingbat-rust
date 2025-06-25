@@ -196,6 +196,13 @@ mod tests {
         assert_eq!(in_order(1, 1, 2, true), true);
     }
 
+    #[test]
+    fn test_less_by_10() {
+        assert_eq!(less_by_10(1, 7, 11), true);
+        assert_eq!(less_by_10(1, 7, 10), false);
+        assert_eq!(less_by_10(11, 1, 7), true);  
+    }
+
     // Array 1 tests
 
     #[test]
