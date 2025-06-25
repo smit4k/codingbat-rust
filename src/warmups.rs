@@ -105,3 +105,7 @@ pub fn near_hundred(n: i32) -> bool {
     
     dist_100 <=10 || dist_200 <= 10
 }
+
+pub fn in_1020(a: i32, b: i32) -> bool {
+    (10..=20).contains(&a) || (10..=20).contains(&b)
+}

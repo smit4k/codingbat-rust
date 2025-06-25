@@ -114,6 +114,13 @@ mod tests {
         assert_eq!(near_hundred(178), false);
     }
 
+    #[test]
+    fn test_in1020() {
+        assert_eq!(in_1020(12, 99), true);
+        assert_eq!(in_1020(21, 12), true);
+        assert_eq!(in_1020(8, 99), false);
+    }
+
     // Logic 1 tests
 
     #[test]
