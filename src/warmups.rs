@@ -1,3 +1,7 @@
+pub fn sleep_in(weekday: bool, vacation: bool) -> bool {
+    !weekday || vacation
+}
+
 pub fn diff21(n: i32) -> i32 {
     if n > 21 {
         2*((n-21).abs())

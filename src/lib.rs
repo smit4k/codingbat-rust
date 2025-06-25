@@ -14,6 +14,13 @@ mod tests {
     // Warmup tests
 
     #[test]
+    fn test_sleep_in() {
+        assert_eq!(sleep_in(false, false), true);
+        assert_eq!(sleep_in(true, false), false);
+        assert_eq!(sleep_in(false, true), true);
+    }
+
+    #[test]
     fn test_diff21() {
         assert_eq!(diff21(19), 2);
         assert_eq!(diff21(10), 11);
