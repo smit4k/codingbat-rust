@@ -341,4 +341,11 @@ mod tests {
         assert_eq!(two_two(&[2, 2, 4]), true);
         assert_eq!(two_two(&[2, 2, 4, 2]), false);
     }
+
+    #[test]
+    fn test_zero_front() {
+        assert_eq!(zero_front(&[1, 0, 0, 1]), [0, 0, 1, 1]);
+        assert_eq!(zero_front(&[0, 1, 1, 0, 1]), [0 ,0, 1, 1, 1]);
+        assert_eq!(zero_front(&[1, 0]), [0, 1]);
+    }
 }

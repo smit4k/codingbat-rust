@@ -126,3 +126,26 @@ pub fn two_two(nums: &[i32]) -> bool {
 
     true
 }
+
+/// Return an array that contains the exact same numbers as the given array, but rearranged so that all the zeros are grouped at the start of the array. 
+/// The order of the non-zero numbers does not matter. So `{1, 0, 0, 1}` becomes `{0 ,0, 1, 1}`. You may modify and return the given array or make a new array.
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::array2::zero_front;
+/// 
+/// assert_eq!(zero_front(&[1, 0, 0, 1]), [0, 0, 1, 1]);
+/// assert_eq!(zero_front(&[0, 1, 1, 0, 1]), [0 ,0, 1, 1, 1]);
+/// assert_eq!(zero_front(&[1, 0]), [0, 1]);
+/// ```
+pub fn zero_front(nums: &[i32]) -> Vec<i32> {
+    let zero_count = nums.iter().filter(|&&x| x == 0).count();
+    let non_zeros: Vec<i32> = nums.iter().copied().filter(|&x| x != 0).collect();
+
+    let mut result = Vec::with_capacity(nums.len());
+    result.extend(std::iter::repeat(0).take(zero_count));
+    result.extend(non_zeros);
+
+    result
+}
