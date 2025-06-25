@@ -99,6 +99,10 @@ pub fn pos_neg(a:i32, b:i32, negative:bool) -> bool {
     }
 }
 
+pub fn int_max(a: i32, b: i32, c: i32) -> i32 {
+    a.max(b).max(c)
+}
+
 pub fn near_hundred(n: i32) -> bool {
     let dist_100 = (100-n).abs();
     let dist_200 = (200-n).abs();

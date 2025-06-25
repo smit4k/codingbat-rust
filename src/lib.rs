@@ -104,6 +104,13 @@ mod tests {
         assert_eq!(lone_teen(21, 19), true);
         assert_eq!(lone_teen(13, 13), false);
     }
+    
+    #[test]
+    fn test_int_max() {
+        assert_eq!(int_max(1, 2, 3), 3);
+        assert_eq!(int_max(1, 3, 2), 3);
+        assert_eq!(int_max(3, 2, 1), 3);  
+    }
 
     #[test]
     fn test_near_hundred() {
