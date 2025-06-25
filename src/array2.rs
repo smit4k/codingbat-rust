@@ -61,3 +61,21 @@ pub fn sum13(nums: &[i32]) -> i32 {
 pub fn lucky13(nums: &[i32]) -> bool {
     nums.iter().all(|&n| n != 1 && n != 3)
 }
+
+/// Given an array length 1 or more of ints, return the difference between the largest and smallest values in the array. 
+/// Note: the built-in Math.min(v1, v2) and Math.max(v1, v2) methods return the smaller or larger of two values.
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::array2::big_diff;
+/// 
+/// assert_eq!(big_diff(&[10, 3, 5, 6]), 7);
+/// assert_eq!(big_diff(&[7, 2, 10, 9]), 8);
+/// assert_eq!(big_diff(&[2, 10, 7, 2]), 8);
+/// ```
+pub fn big_diff(nums: &[i32]) -> i32 {
+    let max = nums.iter().max().copied().unwrap();
+    let min = nums.iter().min().copied().unwrap();
+    max - min
+}

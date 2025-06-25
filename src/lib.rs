@@ -320,4 +320,11 @@ mod tests {
         assert_eq!(lucky13(&[1, 2, 3]), false);
         assert_eq!(lucky13(&[1, 2, 4]), false);
     }
+
+    #[test]
+    fn test_big_diff() {
+        assert_eq!(big_diff(&[10, 3, 5, 6]), 7);
+        assert_eq!(big_diff(&[7, 2, 10, 9]), 8);
+        assert_eq!(big_diff(&[2, 10, 7, 2]), 8);
+    }
 }
