@@ -99,6 +99,11 @@ pub fn pos_neg(a:i32, b:i32, negative:bool) -> bool {
     }
 }
 
+pub fn front_3(str: &str) -> String {
+    let front = &str[..str.len().min(3)];
+    front.repeat(3)
+}
+
 pub fn int_max(a: i32, b: i32, c: i32) -> i32 {
     a.max(b).max(c)
 }
