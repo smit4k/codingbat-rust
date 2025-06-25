@@ -5,13 +5,13 @@
 /// # Test Cases
 ///
 /// ```
-/// use codingbat_rust::logic1::love6;
+/// use codingbat_rust::logic1::love_6;
 ///
-/// assert_eq!(love6(6, 4), true);
-/// assert_eq!(love6(4, 5), false);
-/// assert_eq!(love6(1, 5), true);
+/// assert_eq!(love_6(6, 4), true);
+/// assert_eq!(love_6(4, 5), false);
+/// assert_eq!(love_6(1, 5), true);
 /// ```
-pub fn love6(a: i32, b: i32) -> bool {
+pub fn love_6(a: i32, b: i32) -> bool {
     a == 6 || b == 6 || a + b == 6 || a - b == 6 || b - a == 6
 }
 
@@ -20,13 +20,13 @@ pub fn love6(a: i32, b: i32) -> bool {
 /// # Test Cases
 ///
 /// ```
-/// use codingbat_rust::logic1::more20;
+/// use codingbat_rust::logic1::more_20;
 ///
-/// assert_eq!(more20(20), false);
-/// assert_eq!(more20(21), true);
-/// assert_eq!(more20(22), true);
+/// assert_eq!(more_20(20), false);
+/// assert_eq!(more_20(21), true);
+/// assert_eq!(more_20(22), true);
 /// ```
-pub fn more20(n: u32) -> bool {
+pub fn more_20(n: u32) -> bool {
     n % 20 == 1 || n % 20 == 2
 }
 
@@ -72,13 +72,13 @@ pub fn teen_sum(a: i32, b: i32) -> i32 {
 /// # Test Cases
 ///
 /// ```
-/// use codingbat_rust::logic1::old35;
+/// use codingbat_rust::logic1::old_35;
 ///
-/// assert_eq!(old35(3), true);
-/// assert_eq!(old35(10), true);
-/// assert_eq!(old35(15), false);
+/// assert_eq!(old_35(3), true);
+/// assert_eq!(old_35(10), true);
+/// assert_eq!(old_35(15), false);
 /// ```
-pub fn old35(n: u32) -> bool {
+pub fn old_35(n: u32) -> bool {
     (n % 3 == 0) ^ (n % 5 == 0)
 }
 

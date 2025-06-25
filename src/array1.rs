@@ -4,13 +4,13 @@
 /// # Test Cases
 /// 
 /// ```
-/// use codingbat_rust::array1::first_last6;
+/// use codingbat_rust::array1::first_last_6;
 /// 
-/// assert_eq!(first_last6(&[1, 3, 6]), true);
-/// assert_eq!(first_last6(&[6, 1, 2, 3]), true);
-/// assert_eq!(first_last6(&[13, 6, 1, 2, 3]), false);
+/// assert_eq!(first_last_6(&[1, 3, 6]), true);
+/// assert_eq!(first_last_6(&[6, 1, 2, 3]), true);
+/// assert_eq!(first_last_6(&[13, 6, 1, 2, 3]), false);
 /// ```
-pub fn first_last6(nums: &[i32]) -> bool {
+pub fn first_last_6(nums: &[i32]) -> bool {
     nums[0] == 6 || nums[nums.len()-1] == 6
 }
 
@@ -70,13 +70,13 @@ pub fn make_pi() -> [i32; 3] {
 /// # Test Cases
 /// 
 /// ```
-/// use codingbat_rust::array1::rotate_left3;
+/// use codingbat_rust::array1::rotate_left_3;
 /// 
-/// assert_eq!(rotate_left3([1, 2, 3]), [2, 3, 1]);
-/// assert_eq!(rotate_left3([5, 11, 9]), [11, 9, 5]);
-/// assert_eq!(rotate_left3([7, 0, 0]), [0, 0, 7]);
+/// assert_eq!(rotate_left_3([1, 2, 3]), [2, 3, 1]);
+/// assert_eq!(rotate_left_3([5, 11, 9]), [11, 9, 5]);
+/// assert_eq!(rotate_left_3([7, 0, 0]), [0, 0, 7]);
 /// ```
-pub fn rotate_left3(nums: [i32; 3]) -> [i32; 3] {
+pub fn rotate_left_3(nums: [i32; 3]) -> [i32; 3] {
     [nums[1], nums[2], nums[0]]
 }
 
@@ -86,15 +86,15 @@ pub fn rotate_left3(nums: [i32; 3]) -> [i32; 3] {
 /// # Test Cases
 ///
 /// ```
-/// use codingbat_rust::array1::double23;
+/// use codingbat_rust::array1::double_23;
 ///
-/// assert_eq!(double23(&[2, 2]), true);
-/// assert_eq!(double23(&[3, 3]), true);
-/// assert_eq!(double23(&[2, 3]), false);
-/// assert_eq!(double23(&[]), false);
-/// assert_eq!(double23(&[2]), false);
+/// assert_eq!(double_23(&[2, 2]), true);
+/// assert_eq!(double_23(&[3, 3]), true);
+/// assert_eq!(double_23(&[2, 3]), false);
+/// assert_eq!(double_23(&[]), false);
+/// assert_eq!(double_23(&[2]), false);
 /// ```
-pub fn double23(nums: &[i32]) -> bool {
+pub fn double_23(nums: &[i32]) -> bool {
     if nums.len() == 2 {
         nums == [2, 2] || nums == [3, 3]
     }
@@ -127,13 +127,13 @@ pub fn same_first_last(nums: &[i32]) -> bool {
 /// # Test Cases
 /// 
 /// ```
-/// use codingbat_rust::array1::reverse3;
+/// use codingbat_rust::array1::reverse_3;
 /// 
-/// assert_eq!(reverse3([1, 2, 3]), [3, 2, 1]);
-/// assert_eq!(reverse3([5, 11, 9]), [9, 11, 5]);
-/// assert_eq!(reverse3([7, 0, 0]), [0, 0, 7]);
+/// assert_eq!(reverse_3([1, 2, 3]), [3, 2, 1]);
+/// assert_eq!(reverse_3([5, 11, 9]), [9, 11, 5]);
+/// assert_eq!(reverse_3([7, 0, 0]), [0, 0, 7]);
 /// ```
-pub fn reverse3(nums: [i32; 3]) -> [i32; 3] {
+pub fn reverse_3(nums: [i32; 3]) -> [i32; 3] {
     let mut nums2 = nums;
     nums2.reverse();
     nums2
@@ -178,13 +178,13 @@ pub fn mid_three(nums: &[i32]) -> [i32; 3] {
 /// # Test Cases
 /// 
 /// ```
-/// use codingbat_rust::array1::unlucky1;
+/// use codingbat_rust::array1::unlucky_1;
 /// 
-/// assert_eq!(unlucky1(&[1, 3, 4, 5]), true);
-/// assert_eq!(unlucky1(&[2, 1, 3, 4, 5]), true);
-/// assert_eq!(unlucky1(&[1, 1, 1]), false);
+/// assert_eq!(unlucky_1(&[1, 3, 4, 5]), true);
+/// assert_eq!(unlucky_1(&[2, 1, 3, 4, 5]), true);
+/// assert_eq!(unlucky_1(&[1, 1, 1]), false);
 /// ```
-pub fn unlucky1(nums: &[i32]) -> bool {
+pub fn unlucky_1(nums: &[i32]) -> bool {
     let len = nums.len();
 
     if len >= 2 {
@@ -207,13 +207,13 @@ pub fn unlucky1(nums: &[i32]) -> bool {
 /// # Test Cases
 /// 
 /// ```
-/// use codingbat_rust::array1::no23;
+/// use codingbat_rust::array1::no_23;
 /// 
-/// assert_eq!(no23([4, 5]), true);
-/// assert_eq!(no23([4, 2]), false);
-/// assert_eq!(no23([3, 5]), false);
+/// assert_eq!(no_23([4, 5]), true);
+/// assert_eq!(no_23([4, 2]), false);
+/// assert_eq!(no_23([3, 5]), false);
 /// ```
-pub fn no23(nums: [i32; 2]) -> bool {
+pub fn no_23(nums: [i32; 2]) -> bool {
     nums.into_iter().all(|n| n != 2 && n!= 3)
 }
 
@@ -240,13 +240,13 @@ pub fn front_piece(nums: &[i32]) -> Vec<i32> {
 /// # Test Cases
 /// 
 /// ```
-/// use codingbat_rust::array1::front11;
+/// use codingbat_rust::array1::front_11;
 /// 
-/// assert_eq!(front11(&[1, 2, 3], &[7, 8, 9]), [1, 7]);
-/// assert_eq!(front11(&[1], &[2]), [1, 2]);
-/// assert_eq!(front11(&[1, 7], &[]), [1]);    
+/// assert_eq!(front_11(&[1, 2, 3], &[7, 8, 9]), [1, 7]);
+/// assert_eq!(front_11(&[1], &[2]), [1, 2]);
+/// assert_eq!(front_11(&[1, 7], &[]), [1]);    
 /// ```
-pub fn front11(a: &[i32], b: &[i32]) -> Vec<i32> {
+pub fn front_11(a: &[i32], b: &[i32]) -> Vec<i32> {
     let mut result = Vec::new();
 
     if let Some(&first_a) = a.first() {

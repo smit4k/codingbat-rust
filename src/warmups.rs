@@ -2,7 +2,7 @@ pub fn sleep_in(weekday: bool, vacation: bool) -> bool {
     !weekday || vacation
 }
 
-pub fn diff21(n: i32) -> i32 {
+pub fn diff_21(n: i32) -> i32 {
     if n > 21 {
         2*((n-21).abs())
     }
@@ -24,7 +24,7 @@ pub fn makes_ten(a: i32, b:i32) -> bool {
     a == 10 || b == 10 || a + b == 10
 }
 
-pub fn close10(a:i32, b:i32) -> i32 {
+pub fn close_10(a:i32, b:i32) -> i32 {
     let dist_a = (10-a).abs();
     let dist_b = (10-b).abs();
 
@@ -39,7 +39,7 @@ pub fn close10(a:i32, b:i32) -> i32 {
     }
 }
 
-pub fn or35(n:u32) -> bool {
+pub fn or_35(n:u32) -> bool {
     if n % 3 == 0 || n % 5 == 0 {
         true
     }
@@ -59,11 +59,11 @@ pub fn lone_teen(a: i32, b: i32) -> bool {
     (a_is_teen && !b_is_teen) || (!a_is_teen && b_is_teen)
 }
 
-pub fn in3050(a: i32, b: i32) -> bool {
+pub fn in_3050(a: i32, b: i32) -> bool {
     ((a>=30 && a<=40) && (b>=30 && b<=40)) || ((a>=40 && a<=50) && b>=40 && b<=50)
 }
 
-pub fn max1020(a:i32, b:i32) -> i32 {
+pub fn max_1020(a:i32, b:i32) -> i32 {
     if [a, b].iter().any(|&n| (10..=20).contains(&n)) {
         if (10..=20).contains(&a) && (10..=20).contains(&b) {
             if a > b {
