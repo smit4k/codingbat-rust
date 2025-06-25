@@ -79,3 +79,29 @@ pub fn big_diff(nums: &[i32]) -> i32 {
     let min = nums.iter().min().copied().unwrap();
     max - min
 }
+
+/// Given an array of ints, return true if every 2 that appears in the array is next to another 2
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::array2::two_two;
+/// 
+/// assert_eq!(two_two(&[4, 2, 2, 3]), true);
+/// assert_eq!(two_two(&[2, 2, 4]), true);
+/// assert_eq!(two_two(&[2, 2, 4, 2]), false);
+/// ```
+pub fn two_two(nums: &[i32]) -> bool {
+    for i in 0..nums.len() {
+        if nums[i] == 2 {
+            let left = i > 0 && nums[i - 1] == 2;
+            let right = i < nums.len() - 1 && nums[i + 1] == 2;
+
+            if !(left || right) {
+                return false;
+            }
+        }
+    }
+    
+    true
+}

@@ -327,4 +327,11 @@ mod tests {
         assert_eq!(big_diff(&[7, 2, 10, 9]), 8);
         assert_eq!(big_diff(&[2, 10, 7, 2]), 8);
     }
+
+    #[test]
+    fn test_two_two() {
+        assert_eq!(two_two(&[4, 2, 2, 3]), true);
+        assert_eq!(two_two(&[2, 2, 4]), true);
+        assert_eq!(two_two(&[2, 2, 4, 2]), false);
+    }
 }
