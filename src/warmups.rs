@@ -104,6 +104,11 @@ pub fn front_3(str: &str) -> String {
     front.repeat(3)
 }
 
+pub fn front_22(str: &str) -> String {
+    let front = &str[..str.len().min(2)];
+    format!("{front}{str}{front}")
+} 
+
 pub fn int_max(a: i32, b: i32, c: i32) -> i32 {
     a.max(b).max(c)
 }

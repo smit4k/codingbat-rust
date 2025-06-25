@@ -106,6 +106,13 @@ mod tests {
     }
 
     #[test]
+    fn test_front_22() {
+        assert_eq!(front_22("kitten"), "kikittenki");
+        assert_eq!(front_22("Ha"), "HaHaHa");
+        assert_eq!(front_22("abc"), "ababcab");
+    }
+
+    #[test]
     fn test_lone_teen() {
         assert_eq!(lone_teen(13, 99), true);
         assert_eq!(lone_teen(21, 19), true);
