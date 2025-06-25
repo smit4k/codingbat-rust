@@ -36,11 +36,11 @@ mod tests {
 
     #[test]
     fn test_makes_ten() {
-        assert_eq!(makes_ten(9, 10), true);
-        assert_eq!(makes_ten(9, 9), false);
-        assert_eq!(makes_ten(1, 9), true);
-        assert_eq!(makes_ten(10, 1), true);
-        assert_eq!(makes_ten(5, 5), true);
+        assert_eq!(makes_10(9, 10), true);
+        assert_eq!(makes_10(9, 9), false);
+        assert_eq!(makes_10(1, 9), true);
+        assert_eq!(makes_10(10, 1), true);
+        assert_eq!(makes_10(5, 5), true);
     }
 
     #[test]

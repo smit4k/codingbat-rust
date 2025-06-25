@@ -20,7 +20,7 @@ pub fn sum_double(a: i32, b: i32) -> i32 {
     }
 }
 
-pub fn makes_ten(a: i32, b:i32) -> bool {
+pub fn makes_10(a: i32, b:i32) -> bool {
     a == 10 || b == 10 || a + b == 10
 }
 
