@@ -44,6 +44,10 @@ pub fn string_e(str: &str) -> bool {
     (1..=3).contains(&count)
 }
 
+pub fn monkey_trouble(a_smile: bool, b_smile: bool) -> bool {
+    a_smile == b_smile
+}
+
 pub fn or_35(n:u32) -> bool {
     if n % 3 == 0 || n % 5 == 0 {
         true

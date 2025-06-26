@@ -58,6 +58,13 @@ mod tests {
     }
 
     #[test]
+    fn test_monkey_trouble() {
+        assert_eq!(monkey_trouble(true, true), true);
+        assert_eq!(monkey_trouble(false, false), true);
+        assert_eq!(monkey_trouble(true, false), false);
+    }
+
+    #[test]
     fn test_or35() {
         assert_eq!(or_35(3), true);
         assert_eq!(or_35(5), true) ;
