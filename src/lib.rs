@@ -51,6 +51,13 @@ mod tests {
     }
 
     #[test]
+    fn test_string_e() {
+        assert_eq!(string_e("Hello"), true);
+        assert_eq!(string_e("Heelle"), true);
+        assert_eq!(string_e("Heelele"), false);
+    }
+
+    #[test]
     fn test_or35() {
         assert_eq!(or_35(3), true);
         assert_eq!(or_35(5), true) ;

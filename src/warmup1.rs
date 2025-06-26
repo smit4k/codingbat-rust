@@ -39,6 +39,11 @@ pub fn close_10(a:i32, b:i32) -> i32 {
     }
 }
 
+pub fn string_e(str: &str) -> bool {
+    let count = str.chars().filter(|c| *c == 'e').count();
+    (1..=3).contains(&count)
+}
+
 pub fn or_35(n:u32) -> bool {
     if n % 3 == 0 || n % 5 == 0 {
         true
