@@ -74,6 +74,13 @@ mod tests {
     }
 
     #[test]
+    fn test_last_digit_warmup() {
+        assert_eq!(last_digit_warmup(7, 17), true);
+        assert_eq!(last_digit_warmup(6, 17), false);
+        assert_eq!(last_digit_warmup(3, 113), true);
+    }
+
+    #[test]
     fn test_max1020() {
         assert_eq!(max_1020(11, 19), 19);
         assert_eq!(max_1020(19, 11), 19);

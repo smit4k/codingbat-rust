@@ -63,6 +63,10 @@ pub fn in_3050(a: i32, b: i32) -> bool {
     ((a>=30 && a<=40) && (b>=30 && b<=40)) || ((a>=40 && a<=50) && b>=40 && b<=50)
 }
 
+pub fn last_digit_warmup(a: i32, b: i32) -> bool {
+    a % 10 == b % 10
+}
+
 pub fn max_1020(a:i32, b:i32) -> i32 {
     if [a, b].iter().any(|&n| (10..=20).contains(&n)) {
         if (10..=20).contains(&a) && (10..=20).contains(&b) {
