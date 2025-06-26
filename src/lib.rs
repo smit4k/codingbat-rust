@@ -1,11 +1,11 @@
-pub mod warmups;
+pub mod warmup1;
 pub mod logic1;
 pub mod array1;
 pub mod array2;
 
 #[cfg(test)]
 mod tests {
-    use crate::warmups::*;
+    use crate::warmup1::*;
     use crate::logic1::*;
     use crate::array1::*;
     use crate::array2::*;
