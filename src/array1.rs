@@ -103,6 +103,26 @@ pub fn double_23(nums: &[i32]) -> bool {
     }
 }
 
+/// Start with 2 int arrays, a and b, each length 2. 
+/// Consider the sum of the values in each array. 
+/// Return the array which has the largest sum. In event of a tie, return a.
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::array1::bigger_two;
+/// 
+/// assert_eq!(bigger_two([1, 2], [3, 4]), [3, 4]);
+/// assert_eq!(bigger_two([3, 4], [1, 2]), [3, 4]);
+/// assert_eq!(bigger_two([1, 1], [1, 2]), [1, 2]);
+/// ```
+pub fn bigger_two(a: [i32; 2], b: [i32; 2]) -> [i32; 2] {
+    match (a[0] + a[1]).cmp(&(b[0] + b[1])) {
+        std::cmp::Ordering::Greater | std::cmp::Ordering::Equal => a,
+        std::cmp::Ordering::Less => b,
+    }
+}
+
 /// Given an array of ints, 
 /// return true if the array is length 1 or more, 
 /// and the first element and the last element are equal.

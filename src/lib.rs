@@ -313,6 +313,13 @@ mod tests {
     }
 
     #[test]
+    fn test_bigger_two() {
+        assert_eq!(bigger_two([1, 2], [3, 4]), [3, 4]);
+        assert_eq!(bigger_two([3, 4], [1, 2]), [3, 4]);
+        assert_eq!(bigger_two([1, 1], [1, 2]), [1, 2]);
+    }
+
+    #[test]
     fn test_same_first_last() {
         assert_eq!(same_first_last(&[1, 2, 3]), false);
         assert_eq!(same_first_last(&[1, 2, 3, 1]), true);
