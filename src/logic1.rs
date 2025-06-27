@@ -82,6 +82,22 @@ pub fn old_35(n: u32) -> bool {
     (n % 3 == 0) ^ (n % 5 == 0)
 }
 
+/// Return `true` if the given non-negative number is 1 or 2 less than a multiple of 20. So for example 38 and 39 return `true`, but 40 returns false.
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::logic1::less_20;
+/// 
+/// assert_eq!(less_20(18), true);
+/// assert_eq!(less_20(19), true);
+/// assert_eq!(less_20(20), false);
+/// ```
+pub fn less_20(n: i32) -> bool {
+    let remainder = n % 20;
+    remainder == 18 || remainder == 19
+}
+
 /// You have a green lottery ticket, with ints a, b, and c on it. 
 /// If the numbers are all different from each other, the result is 0. 
 /// If all of the numbers are the same, the result is 20.

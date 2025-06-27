@@ -204,6 +204,13 @@ mod tests {
     }
 
     #[test]
+    fn test_less_20() {
+        assert_eq!(less_20(18), true);
+        assert_eq!(less_20(19), true);
+        assert_eq!(less_20(20), false);
+    }
+
+    #[test]
     fn test_green_ticket() {
         assert_eq!(green_ticket(1, 2, 3), 0);
         assert_eq!(green_ticket(2, 2, 2), 20);
