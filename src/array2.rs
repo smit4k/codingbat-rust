@@ -80,6 +80,21 @@ pub fn big_diff(nums: &[i32]) -> i32 {
     max - min
 }
 
+/// Given an array of ints, return `true` if the number of 1's is greater than the number of 4's
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::array2::more_14;
+/// 
+/// assert_eq!(more_14(&[1, 4, 1]), true);
+/// assert_eq!(more_14(&[1, 4, 1, 4]), false);
+/// assert_eq!(more_14(&[1, 1]), true);  
+/// ```
+pub fn more_14(nums: &[i32]) -> bool {
+    nums.iter().filter(|&&x| x == 1).count() > nums.iter().filter(|&&x| x == 4).count()
+}
+
 /// Given a non-empty array of ints, return a new array containing the elements from the original array that come before the first 4 in the original array. 
 /// The original array will contain at least one 4.
 /// 

@@ -399,6 +399,13 @@ mod tests {
     }
 
     #[test]
+    fn test_more_14() {
+        assert_eq!(more_14(&[1, 4, 1]), true);
+        assert_eq!(more_14(&[1, 4, 1, 4]), false);
+        assert_eq!(more_14(&[1, 1]), true);  
+    }
+
+    #[test]
     fn test_big_diff() {
         assert_eq!(big_diff(&[10, 3, 5, 6]), 7);
         assert_eq!(big_diff(&[7, 2, 10, 9]), 8);
