@@ -31,6 +31,23 @@ pub fn common_end(a: &[i32], b: &[i32]) -> bool {
     a[0] == b[0] || a[a.len()-1] == b[b.len()-1]
 }
 
+/// Given an array of ints length 3, figure out which is larger, the first or last element in the array, and set all the other elements to be that value. 
+/// Return the changed array
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::array1::max_end_3;
+/// 
+/// assert_eq!(max_end_3([1, 2, 3]), [3, 3, 3]);
+/// assert_eq!(max_end_3([11, 5, 9]), [11, 11, 11]);
+/// assert_eq!(max_end_3([2, 11, 3]), [3, 3, 3]);
+/// ```
+pub fn max_end_3(nums: [i32; 3]) -> [i32; 3] {
+    let max = if nums[0] > nums[2] { nums[0] } else { nums[2] };
+    [max; 3]
+}
+
 /// Given an int array, return a new array with double the length where its last element is the same as the original array, 
 /// and all the other elements are 0. 
 /// The original array will be length 1 or more. Note: by default, a new int array contains all 0's.
