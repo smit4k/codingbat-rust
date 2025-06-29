@@ -283,6 +283,13 @@ mod tests {
     }
 
     #[test]
+    fn test_make_last() {
+        assert_eq!(make_last(&[4, 5, 6]), [0, 0, 0, 0, 0, 6]);
+        assert_eq!(make_last(&[1, 2]), [0, 0, 0, 2]);
+        assert_eq!(make_last(&[3]), [0, 3]);
+    }
+
+    #[test]
     fn test_max_triple() {
         assert_eq!(max_triple(&[1, 2, 3]), 3);
         assert_eq!(max_triple(&[1, 5, 3]), 5);

@@ -31,6 +31,29 @@ pub fn common_end(a: &[i32], b: &[i32]) -> bool {
     a[0] == b[0] || a[a.len()-1] == b[b.len()-1]
 }
 
+/// Given an int array, return a new array with double the length where its last element is the same as the original array, 
+/// and all the other elements are 0. 
+/// The original array will be length 1 or more. Note: by default, a new int array contains all 0's.
+/// 
+/// # Test Cases
+/// 
+/// ```
+/// use codingbat_rust::array1::make_last;
+/// 
+/// assert_eq!(make_last(&[4, 5, 6]), [0, 0, 0, 0, 0, 6]);
+/// assert_eq!(make_last(&[1, 2]), [0, 0, 0, 2]);
+/// assert_eq!(make_last(&[3]), [0, 3]);
+/// ```
+pub fn make_last(nums: &[i32]) -> Vec<i32> {
+    let mut res = vec![0; nums.len() * 2];
+    let len = res.len();
+    if let Some(&last) = nums.last() {
+        res[len - 1] = last;    
+    }
+
+    res
+}
+
 /// Given an array of ints of odd length, look at the first, last, and middle values in the array and return the largest. 
 /// The array length will be a least 1.
 /// 
