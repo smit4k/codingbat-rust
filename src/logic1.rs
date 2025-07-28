@@ -30,6 +30,21 @@ pub fn more_20(n: u32) -> bool {
     n % 20 == 1 || n % 20 == 2
 }
 
+/// Return `true` if the given non-negative number is within 2 of a multiple of 10.
+///
+/// # Test Cases
+///
+/// ```
+/// use codingbat_rust::logic1::near_ten;
+///
+/// assert_eq!(near_ten(12), true);
+/// assert_eq!(near_ten(17), false);
+/// assert_eq!(near_ten(19), true);
+/// ```
+pub fn near_ten(num: u32) -> bool {
+    num % 10 <= 2 || num % 10 >= 8
+}
+
 /// Given three integers `a`, `b`, and `c`, returns `true` if it is possible 
 /// to add two of the integers to get the third.
 ///

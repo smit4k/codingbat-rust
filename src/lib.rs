@@ -183,6 +183,13 @@ mod tests {
     }
 
     #[test]
+    fn test_near_ten() {
+        assert_eq!(near_ten(12), true);
+        assert_eq!(near_ten(17), false);
+        assert_eq!(near_ten(19), true);  
+    }
+
+    #[test]
     fn test_two_as_one() {
         assert_eq!(two_as_one(1, 2, 3), true);
         assert_eq!(two_as_one(3, 1, 2), true);
