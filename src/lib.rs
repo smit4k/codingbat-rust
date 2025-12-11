@@ -1,15 +1,14 @@
-pub mod warmup1;
-pub mod logic1;
 pub mod array1;
 pub mod array2;
+pub mod logic1;
+pub mod warmup1;
 
 #[cfg(test)]
 mod tests {
-    use crate::warmup1::*;
-    use crate::logic1::*;
     use crate::array1::*;
     use crate::array2::*;
-
+    use crate::logic1::*;
+    use crate::warmup1::*;
 
     // Warmup tests
 
@@ -67,7 +66,7 @@ mod tests {
     #[test]
     fn test_or35() {
         assert_eq!(or_35(3), true);
-        assert_eq!(or_35(5), true) ;
+        assert_eq!(or_35(5), true);
         assert_eq!(or_35(10), true);
         assert_eq!(or_35(8), false);
     }
@@ -75,7 +74,7 @@ mod tests {
     #[test]
     fn test_has_teen() {
         assert_eq!(has_teen(13, 20, 10), true);
-        assert_eq!(has_teen(20, 19, 10), true) ;
+        assert_eq!(has_teen(20, 19, 10), true);
         assert_eq!(has_teen(20, 10, 13), true);
         assert_eq!(has_teen(8, 7, 24), false);
     }
@@ -139,12 +138,12 @@ mod tests {
         assert_eq!(lone_teen(21, 19), true);
         assert_eq!(lone_teen(13, 13), false);
     }
-    
+
     #[test]
     fn test_int_max() {
         assert_eq!(int_max(1, 2, 3), 3);
         assert_eq!(int_max(1, 3, 2), 3);
-        assert_eq!(int_max(3, 2, 1), 3);  
+        assert_eq!(int_max(3, 2, 1), 3);
     }
 
     #[test]
@@ -186,7 +185,7 @@ mod tests {
     fn test_near_ten() {
         assert_eq!(near_ten(12), true);
         assert_eq!(near_ten(17), false);
-        assert_eq!(near_ten(19), true);  
+        assert_eq!(near_ten(19), true);
     }
 
     #[test]
@@ -251,7 +250,7 @@ mod tests {
         assert_eq!(red_ticket(2, 2, 1), 0);
         assert_eq!(red_ticket(0, 0, 0), 5);
     }
-    
+
     #[test]
     fn test_blue_ticket() {
         assert_eq!(blue_ticket(9, 1, 0), 10);
@@ -270,7 +269,7 @@ mod tests {
     fn test_less_by_10() {
         assert_eq!(less_by_10(1, 7, 11), true);
         assert_eq!(less_by_10(1, 7, 10), false);
-        assert_eq!(less_by_10(11, 1, 7), true);  
+        assert_eq!(less_by_10(11, 1, 7), true);
     }
 
     // Array 1 tests
@@ -379,14 +378,14 @@ mod tests {
     fn test_front_piece() {
         assert_eq!(front_piece(&[1, 2, 3]), [1, 2]);
         assert_eq!(front_piece(&[1, 2]), [1, 2]);
-        assert_eq!(front_piece(&[1]), [1]);   
+        assert_eq!(front_piece(&[1]), [1]);
     }
 
     #[test]
     fn test_front11() {
         assert_eq!(front_11(&[1, 2, 3], &[7, 8, 9]), [1, 7]);
         assert_eq!(front_11(&[1], &[2]), [1, 2]);
-        assert_eq!(front_11(&[1, 7], &[]), [1]);    
+        assert_eq!(front_11(&[1, 7], &[]), [1]);
     }
 
     #[test]
@@ -423,7 +422,7 @@ mod tests {
     fn test_more_14() {
         assert_eq!(more_14(&[1, 4, 1]), true);
         assert_eq!(more_14(&[1, 4, 1, 4]), false);
-        assert_eq!(more_14(&[1, 1]), true);  
+        assert_eq!(more_14(&[1, 1]), true);
     }
 
     #[test]
@@ -450,7 +449,14 @@ mod tests {
     #[test]
     fn test_zero_front() {
         assert_eq!(zero_front(&[1, 0, 0, 1]), [0, 0, 1, 1]);
-        assert_eq!(zero_front(&[0, 1, 1, 0, 1]), [0 ,0, 1, 1, 1]);
+        assert_eq!(zero_front(&[0, 1, 1, 0, 1]), [0, 0, 1, 1, 1]);
         assert_eq!(zero_front(&[1, 0]), [0, 1]);
+    }
+
+    #[test]
+    fn test_even_odd() {
+        assert_eq!(even_odd(&[1, 0, 1, 0, 0, 1, 1]), [0, 0, 0, 1, 1, 1, 1]);
+        assert_eq!(even_odd(&[3, 3, 2]), [2, 3, 3]);
+        assert_eq!(even_odd(&[2, 2, 2]), [2, 2, 2]);
     }
 }
