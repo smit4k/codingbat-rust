@@ -176,22 +176,18 @@ pub fn zero_front(nums: &[i32]) -> Vec<i32> {
 /// assert_eq!(even_odd(&[2, 2, 2]), [2, 2, 2]);
 /// ```
 pub fn even_odd(nums: &[i32]) -> Vec<i32> {
-    let mut even_vec = Vec::new();
-    let mut odd_vec = Vec::new();
+    let mut evens = Vec::new();
+    let mut odds = Vec::new();
 
-    for num in nums {
-        if num % 2 == 0 {
-            even_vec.push(*num);
+    for &n in nums {
+        if n % 2 == 0 {
+            evens.push(n);
+        } else {
+            odds.push(n);
         }
     }
 
-    for num in nums {
-        if num % 2 != 0 {
-            odd_vec.push(*num);
-        }
-    }
-
-    even_vec.extend(odd_vec);
-    even_vec
+    evens.extend(odds);
+    evens
 }
 
