@@ -459,4 +459,11 @@ mod tests {
         assert_eq!(even_odd(&[3, 3, 2]), [2, 3, 3]);
         assert_eq!(even_odd(&[2, 2, 2]), [2, 2, 2]);
     }
+
+    #[test]
+    fn test_either24() {
+        assert_eq!(either24(&[1, 2, 2, 3]), true);
+        assert_eq!(either24(&[4, 4, 1]), true);
+        assert_eq!(either24(&[4, 4, 1, 2, 2]), false);
+    }
 }

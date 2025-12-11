@@ -95,6 +95,33 @@ pub fn more_14(nums: &[i32]) -> bool {
     nums.iter().filter(|&&x| x == 1).count() > nums.iter().filter(|&&x| x == 4).count()
 }
 
+/// Given an array of ints, return `true` if the array contains a 2 next to a 2 or a 4 next to a 4, but not both.
+///
+/// # Test Cases
+///
+/// ```
+/// use codingbat_rust::array2::either24;
+///
+/// assert_eq!(either24(&[1, 2, 2]), true);
+/// assert_eq!(either24(&[4, 4, 1]), true);
+/// assert_eq!(either24(&[4, 4, 1, 2, 2]), false);
+/// ```
+pub fn either24(nums: &[i32]) -> bool {
+    let mut has22 = false;
+    let mut has44 = false;
+
+    for i in 0..nums.len().saturating_sub(1) {
+        if nums[i] == 2 && nums[i + 1] == 2 {
+            has22 = true;
+        }
+        if nums[i] == 4 && nums[i + 1] == 4 {
+            has44 = true;
+        }
+    }
+
+    has22 ^ has44
+}
+
 /// Given a non-empty array of ints, return a new array containing the elements from the original array that come before the first 4 in the original array.
 /// The original array will contain at least one 4.
 ///
