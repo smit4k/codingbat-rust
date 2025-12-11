@@ -95,6 +95,30 @@ pub fn more_14(nums: &[i32]) -> bool {
     nums.iter().filter(|&&x| x == 1).count() > nums.iter().filter(|&&x| x == 4).count()
 }
 
+/// Given an array of ints, return true if there is a 1 in the array with a 2 somewhere later in the array.
+///
+/// # Test Cases
+/// ```
+/// use codingbat_rust::array2::has12;
+///
+/// assert_eq!(has12(&[2, 1, 3]), false);
+/// assert_eq!(has12(&[3, 1, 2]), true);
+/// assert_eq!(has12(&[3, 1, 4, 5, 2]), true);
+/// ```
+pub fn has12(nums: &[i32]) -> bool {
+    let mut seen1 = false;
+
+    for &n in nums {
+        if n == 1 {
+            seen1 = true;
+        } else if n == 2 && seen1 {
+            return true;
+        }
+    }
+
+    false
+}
+
 /// Given an array of ints, return `true` if the array contains a 2 next to a 2 or a 4 next to a 4, but not both.
 ///
 /// # Test Cases

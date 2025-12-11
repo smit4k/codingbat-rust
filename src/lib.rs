@@ -466,4 +466,11 @@ mod tests {
         assert_eq!(either24(&[4, 4, 1]), true);
         assert_eq!(either24(&[4, 4, 1, 2, 2]), false);
     }
+
+    #[test]
+    fn test_has12() {
+        assert_eq!(has12(&[2, 1, 3]), false);
+        assert_eq!(has12(&[3, 1, 2]), true);
+        assert_eq!(has12(&[3, 1, 4, 5, 2]), true);
+    }
 }
