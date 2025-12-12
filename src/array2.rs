@@ -104,6 +104,26 @@ pub fn big_diff(nums: &[i32]) -> i32 {
     max - min
 }
 
+/// Given an array of ints, return true if the value 3 appears in the array exactly 3 times,
+/// and no 3's are next to each other.
+///
+/// # Test Cases
+///
+/// ```
+/// use codingbat_rust::array2::have_three;
+///
+/// assert_eq!(have_three(&[3, 1, 3, 1, 3]), true);
+/// assert_eq!(have_three(&[3, 1, 3, 3]), false);
+/// assert_eq!(have_three(&[3, 4, 3, 4, 4, 3, 4]), true);
+/// ```
+pub fn have_three(nums: &[i32]) -> bool {
+    if nums.windows(2).any(|w| w == [3, 3]) {
+        return false;
+    }
+
+    nums.iter().filter(|&&n| n == 3).count() == 3
+}
+
 /// Given an array of ints, return `true` if the number of 1's is greater than the number of 4's
 ///
 /// # Test Cases

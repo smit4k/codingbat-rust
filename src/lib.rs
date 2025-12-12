@@ -440,6 +440,13 @@ mod tests {
     }
 
     #[test]
+    fn test_have_three() {
+        assert_eq!(have_three(&[3, 1, 3, 1, 3]), true);
+        assert_eq!(have_three(&[3, 1, 3, 3]), false);
+        assert_eq!(have_three(&[3, 4, 3, 4, 4, 3, 4]), true);
+    }
+
+    #[test]
     fn test_pre4() {
         assert_eq!(pre4(&[1, 2, 4, 1]), [1, 2]);
         assert_eq!(pre4(&[3, 1, 4]), [3, 1]);
