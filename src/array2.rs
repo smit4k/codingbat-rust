@@ -47,6 +47,30 @@ pub fn sum13(nums: &[i32]) -> i32 {
     sum
 }
 
+/// Return a version of the given array where all the 10's have been removed.
+/// The remaining elements should shift left towards the start of the array as needed,
+/// and the empty spaces a the end of the array should be 0. So {1, 10, 10, 2} yields {1, 2, 0, 0}.
+/// You may modify and return the given array or make a new array.
+///
+/// # Test Cases
+/// ```
+/// use codingbat_rust::array2::without_ten;
+///
+/// assert_eq!(without_ten(&[1, 10, 10, 2]), [1, 2, 0, 0]);
+/// assert_eq!(without_ten(&[10, 2, 10]), [2, 0, 0]);
+/// assert_eq!(without_ten(&[1, 99, 10]), [1, 99, 0]);
+/// ```
+pub fn without_ten(nums: &[i32]) -> Vec<i32> {
+    let mut res = nums
+        .iter()
+        .copied()
+        .filter(|&x| x != 10)
+        .collect::<Vec<i32>>();
+
+    res.resize(nums.len(), 0);
+    res
+}
+
 /// Given an array of ints, return `true` if the array contains no 1's and no 3's.
 ///
 /// # Test Cases
@@ -241,4 +265,3 @@ pub fn even_odd(nums: &[i32]) -> Vec<i32> {
     evens.extend(odds);
     evens
 }
-

@@ -412,6 +412,13 @@ mod tests {
     }
 
     #[test]
+    fn test_without_ten() {
+        assert_eq!(without_ten(&[1, 10, 10, 2]), [1, 2, 0, 0]);
+        assert_eq!(without_ten(&[10, 2, 10]), [2, 0, 0]);
+        assert_eq!(without_ten(&[1, 99, 10]), [1, 99, 0]);
+    }
+
+    #[test]
     fn test_lucky13() {
         assert_eq!(lucky13(&[0, 2, 4]), true);
         assert_eq!(lucky13(&[1, 2, 3]), false);
