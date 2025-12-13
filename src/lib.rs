@@ -487,4 +487,11 @@ mod tests {
         assert_eq!(has12(&[3, 1, 2]), true);
         assert_eq!(has12(&[3, 1, 4, 5, 2]), true);
     }
+
+    #[test]
+    fn test_less20() {
+        assert_eq!(less_20(18), true);
+        assert_eq!(less_20(19), true);
+        assert_eq!(less_20(20), false);
+    }
 }
