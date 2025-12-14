@@ -447,6 +447,13 @@ mod tests {
     }
 
     #[test]
+    fn test_triple_up() {
+        assert_eq!(triple_up(&[1, 4, 5, 6, 2]), true);
+        assert_eq!(triple_up(&[1, 2, 3]), true);
+        assert_eq!(triple_up(&[1, 2, 4]), false);
+    }
+
+    #[test]
     fn test_pre4() {
         assert_eq!(pre4(&[1, 2, 4, 1]), [1, 2]);
         assert_eq!(pre4(&[3, 1, 4]), [3, 1]);

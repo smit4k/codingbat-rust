@@ -124,6 +124,22 @@ pub fn have_three(nums: &[i32]) -> bool {
     nums.iter().filter(|&&n| n == 3).count() == 3
 }
 
+/// Return `true` if the array contains, somewhere, three increasing adjacent numbers like .... 4, 5, 6, ... or 23, 24, 25.    
+///
+/// # Test Cases
+///
+/// ```
+/// use codingbat_rust::array2::triple_up;
+///
+/// assert_eq!(triple_up(&[1, 4, 5, 6, 2]), true);
+/// assert_eq!(triple_up(&[1, 2, 3]), true);
+/// assert_eq!(triple_up(&[1, 2, 4]), false);
+/// ```
+pub fn triple_up(nums: &[i32]) -> bool {
+    nums.windows(3)
+        .any(|w| w[1] == w[0] + 1 && w[2] == w[1] + 1)
+}
+
 /// Given an array of ints, return `true` if the number of 1's is greater than the number of 4's
 ///
 /// # Test Cases
