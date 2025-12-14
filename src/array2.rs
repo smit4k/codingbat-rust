@@ -104,6 +104,21 @@ pub fn big_diff(nums: &[i32]) -> i32 {
     max - min
 }
 
+/// Given an array of ints, return `true` if the sum of all the 2's in the array is exactly 8.
+///
+/// # Test Cases
+///
+/// ```
+/// use codingbat_rust::array2::sum28;
+///
+/// assert_eq!(sum28(&[2, 3, 2, 2, 4, 2]), true);
+/// assert_eq!(sum28(&[2, 3, 2, 2, 4, 2, 2]), false);
+/// assert_eq!(sum28(&[1, 2, 3, 4]), false);
+/// ```
+pub fn sum28(nums: &[i32]) -> bool {
+    nums.iter().filter(|&&x| x == 2).count() == 4
+}
+
 /// Given an array of ints, return true if the value 3 appears in the array exactly 3 times,
 /// and no 3's are next to each other.
 ///

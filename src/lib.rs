@@ -440,6 +440,13 @@ mod tests {
     }
 
     #[test]
+    fn test_sum28() {
+        assert_eq!(sum28(&[2, 3, 2, 2, 4, 2]), true);
+        assert_eq!(sum28(&[2, 3, 2, 2, 4, 2, 2]), false);
+        assert_eq!(sum28(&[1, 2, 3, 4]), false);
+    }
+
+    #[test]
     fn test_have_three() {
         assert_eq!(have_three(&[3, 1, 3, 1, 3]), true);
         assert_eq!(have_three(&[3, 1, 3, 3]), false);
