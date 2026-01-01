@@ -139,7 +139,7 @@ pub fn have_three(nums: &[i32]) -> bool {
     nums.iter().filter(|&&n| n == 3).count() == 3
 }
 
-/// Return `true` if the array contains, somewhere, three increasing adjacent numbers like .... 4, 5, 6, ... or 23, 24, 25.    
+/// Return `true` if the array contains, somewhere, three increasing adjacent numbers like .... 4, 5, 6, ... or 23, 24, 25.
 ///
 /// # Test Cases
 ///
@@ -164,7 +164,7 @@ pub fn triple_up(nums: &[i32]) -> bool {
 ///
 /// assert_eq!(more_14(&[1, 4, 1]), true);
 /// assert_eq!(more_14(&[1, 4, 1, 4]), false);
-/// assert_eq!(more_14(&[1, 1]), true);  
+/// assert_eq!(more_14(&[1, 1]), true);
 /// ```
 pub fn more_14(nums: &[i32]) -> bool {
     nums.iter().filter(|&&x| x == 1).count() > nums.iter().filter(|&&x| x == 4).count()
@@ -265,6 +265,35 @@ pub fn two_two(nums: &[i32]) -> bool {
     }
 
     true
+}
+
+/// Return a version of the given array where each zero value
+///  in the array is replaced by the largest odd value to the right of the zero in the array.
+/// If there is no odd value to the right of the zero, leave the zero as a zero.
+///
+/// # Test Cases
+///
+/// ```
+/// use codingbat_rust::array2::zero_max;
+///
+/// assert_eq!(zero_max(&[0, 5, 0, 3]), [5, 5, 3, 3]);
+/// assert_eq!(zero_max(&[0, 4, 0, 3]), [3, 4, 3, 3]);
+/// assert_eq!(zero_max(&[0, 1, 0]), [1, 1, 0]);
+/// ```
+pub fn zero_max(nums: &[i32]) -> Vec<i32> {
+    let mut result = nums.to_vec();
+    let mut max_odd = 0;
+
+    for i in (0..nums.len()).rev() {
+        if nums[i] % 2 != 0 {
+            max_odd = max_odd.max(nums[i]);
+        }
+        if nums[i] == 0 {
+            result[i] = max_odd;
+        }
+    }
+
+    result
 }
 
 /// Return an array that contains the exact same numbers as the given array, but rearranged so that all the zeros are grouped at the start of the array.

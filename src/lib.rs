@@ -475,6 +475,13 @@ mod tests {
     }
 
     #[test]
+    fn test_zero_max() {
+        assert_eq!(zero_max(&[0, 5, 0, 3]), [5, 5, 3, 3]);
+        assert_eq!(zero_max(&[0, 4, 0, 3]), [3, 4, 3, 3]);
+        assert_eq!(zero_max(&[0, 1, 0]), [1, 1, 0]);
+    }
+
+    #[test]
     fn test_zero_front() {
         assert_eq!(zero_front(&[1, 0, 0, 1]), [0, 0, 1, 1]);
         assert_eq!(zero_front(&[0, 1, 1, 0, 1]), [0, 0, 1, 1, 1]);
