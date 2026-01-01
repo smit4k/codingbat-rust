@@ -475,6 +475,13 @@ mod tests {
     }
 
     #[test]
+    fn test_is_everywhere() {
+        assert_eq!(is_everywhere(&[1, 2, 1, 3], 1), true);
+        assert_eq!(is_everywhere(&[1, 2, 1, 3], 2), false);
+        assert_eq!(is_everywhere(&[1, 2, 1, 3, 4], 1), false);
+    }
+
+    #[test]
     fn test_zero_max() {
         assert_eq!(zero_max(&[0, 5, 0, 3]), [5, 5, 3, 3]);
         assert_eq!(zero_max(&[0, 4, 0, 3]), [3, 4, 3, 3]);

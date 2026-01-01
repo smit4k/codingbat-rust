@@ -267,6 +267,23 @@ pub fn two_two(nums: &[i32]) -> bool {
     true
 }
 
+/// We'll say that a value is "everywhere" in an array if for every pair of adjacent elements in the array,
+/// at least one of the pair is that value.
+/// Return `true` if the given value is everywhere in the array.
+///
+/// # Test Cases
+///
+/// ```
+/// use codingbat_rust::array2::is_everywhere;
+///
+/// assert_eq!(is_everywhere(&[1, 2, 1, 3], 1), true);
+/// assert_eq!(is_everywhere(&[1, 2, 1, 3], 2), false);
+/// assert_eq!(is_everywhere(&[1, 2, 1, 3, 4], 1), false);
+/// ```
+pub fn is_everywhere(nums: &[i32], val: i32) -> bool {
+    nums.windows(2).all(|pair| pair.contains(&val))
+}
+
 /// Return a version of the given array where each zero value
 ///  in the array is replaced by the largest odd value to the right of the zero in the array.
 /// If there is no odd value to the right of the zero, leave the zero as a zero.
