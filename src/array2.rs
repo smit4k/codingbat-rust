@@ -47,6 +47,23 @@ pub fn sum13(nums: &[i32]) -> i32 {
     sum
 }
 
+/// Return an array that is "left shifted" by one -- so {6, 2, 5, 3} returns {2, 5, 3, 6}.
+/// You may modify and return the given array, or return a new array.
+///
+/// # Test Cases
+/// ```
+/// use codingbat_rust::array2::left_shift;
+///
+/// assert_eq!(left_shift(&[6, 2, 5, 3]), [2, 5, 3, 6]);
+/// assert_eq!(left_shift(&[1, 2]), [2, 1]);
+/// assert_eq!(left_shift(&[1]), [1]);
+/// ```
+pub fn left_shift(nums: &[i32]) -> Vec<i32> {
+    let mut res = nums.to_vec();
+    res.rotate_left(1);
+    res
+}
+
 /// Return a version of the given array where all the 10's have been removed.
 /// The remaining elements should shift left towards the start of the array as needed,
 /// and the empty spaces a the end of the array should be 0. So {1, 10, 10, 2} yields {1, 2, 0, 0}.

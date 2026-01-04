@@ -412,6 +412,13 @@ mod tests {
     }
 
     #[test]
+    fn test_left_shift() {
+        assert_eq!(left_shift(&[6, 2, 5, 3]), [2, 5, 3, 6]);
+        assert_eq!(left_shift(&[1, 2]), [2, 1]);
+        assert_eq!(left_shift(&[1]), [1]);
+    }
+
+    #[test]
     fn test_without_ten() {
         assert_eq!(without_ten(&[1, 10, 10, 2]), [1, 2, 0, 0]);
         assert_eq!(without_ten(&[10, 2, 10]), [2, 0, 0]);
