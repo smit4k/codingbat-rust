@@ -424,6 +424,12 @@ mod tests {
         assert_eq!(without_ten(&[10, 2, 10]), [2, 0, 0]);
         assert_eq!(without_ten(&[1, 99, 10]), [1, 99, 0]);
     }
+    #[test]
+    fn test_fizz_array3() {
+        assert_eq!(fizz_array3(5, 10), [5, 6, 7, 8, 9]);
+        assert_eq!(fizz_array3(11, 18), [11, 12, 13, 14, 15, 16, 17]);
+        assert_eq!(fizz_array3(1, 3), [1, 2]);
+    }
 
     #[test]
     fn test_lucky13() {
