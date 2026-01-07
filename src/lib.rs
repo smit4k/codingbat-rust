@@ -108,6 +108,13 @@ mod tests {
     }
 
     #[test]
+    fn test_mod_three() {
+        assert_eq!(mod_three(&[2, 1, 3, 5]), true);
+        assert_eq!(mod_three(&[2, 1, 2, 5]), false);
+        assert_eq!(mod_three(&[2, 4, 2, 5]), true);
+    }
+
+    #[test]
     fn test_pos_neg() {
         assert_eq!(pos_neg(1, -1, false), true);
         assert_eq!(pos_neg(-1, 1, false), true);

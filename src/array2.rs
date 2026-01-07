@@ -153,6 +153,23 @@ pub fn sum28(nums: &[i32]) -> bool {
     nums.iter().filter(|&&x| x == 2).count() == 4
 }
 
+/// Given an array of ints,
+/// return `true` if the array contains
+/// either 3 even or 3 odd values all next to each other.
+///
+/// # Test Cases
+/// ```
+/// use codingbat_rust::array2::mod_three;
+///
+/// assert_eq!(mod_three(&[2, 1, 3, 5]), true);
+/// assert_eq!(mod_three(&[2, 1, 2, 5]), false);
+/// assert_eq!(mod_three(&[2, 4, 2, 5]), true);
+/// ```
+pub fn mod_three(nums: &[i32]) -> bool {
+    nums.windows(3)
+        .any(|w| w.iter().all(|x| x % 2 == 0) || w.iter().all(|x| x % 2 != 0))
+}
+
 /// Given an array of ints, return true if the value 3 appears in the array exactly 3 times,
 /// and no 3's are next to each other.
 ///
