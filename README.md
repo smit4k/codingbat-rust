@@ -14,17 +14,18 @@ This repository contains idiomatic Rust solutions for CodingBat exercises, organ
 ## Getting Started
 
 1. **Clone the repository:**
+
     ```sh
     git clone https://github.com/smit4k/codingbat-rust.git
     cd codingbat-rust
     ```
 
 2. **Run tests:**
+
     ```sh
     cargo test
     ```
 
 ## Contributing
 
-Contributions are welcome! Please open issues or pull requests for improvements or new exercises.
-I would **highly appreciate it** if you would add solutions to exercises and documentation for the exercises
+Contributions are welcome! Feel free to open a [pull request](https://github.com/smit4k/codingbat-rust/pulls) with your idiomatic rust solution for a codingbat problem!
