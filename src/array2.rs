@@ -81,6 +81,19 @@ pub fn fizz_array3(start: i32, end: i32) -> Vec<i32> {
     (start..end).collect()
 }
 
+/// Given an array of ints, return `true` if every element is a 1 or a 4.
+///
+/// # Test Cases
+/// ```
+/// use codingbat_rust::array2::only14;
+/// assert_eq!(only14(&[1, 4, 1, 4]), true);
+/// assert_eq!(only14(&[1, 4, 2, 4]), false);
+/// assert_eq!(only14(&[1, 1]), true);
+/// ```
+pub fn only14(nums: &[i32]) -> bool {
+    nums.iter().all(|&n| (n == 1) || (n == 4))
+}
+
 /// Return a version of the given array where all the 10's have been removed.
 /// The remaining elements should shift left towards the start of the array as needed,
 /// and the empty spaces a the end of the array should be 0. So {1, 10, 10, 2} yields {1, 2, 0, 0}.

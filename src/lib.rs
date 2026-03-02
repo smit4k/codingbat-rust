@@ -439,6 +439,13 @@ mod tests {
     }
 
     #[test]
+    fn test_only14() {
+        assert_eq!(only14(&[1, 4, 1, 4]), true);
+        assert_eq!(only14(&[1, 4, 2, 4]), false);
+        assert_eq!(only14(&[1, 1]), true);
+    }
+
+    #[test]
     fn test_lucky13() {
         assert_eq!(lucky13(&[0, 2, 4]), true);
         assert_eq!(lucky13(&[1, 2, 3]), false);
