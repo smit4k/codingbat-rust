@@ -446,6 +446,13 @@ mod tests {
     }
 
     #[test]
+    fn test_has77() {
+        assert_eq!(has77(&[1, 7, 7]), true);
+        assert_eq!(has77(&[1, 7, 1, 7]), true);
+        assert_eq!(has77(&[1, 7, 1, 1, 7]), false);
+    }
+
+    #[test]
     fn test_lucky13() {
         assert_eq!(lucky13(&[0, 2, 4]), true);
         assert_eq!(lucky13(&[1, 2, 3]), false);

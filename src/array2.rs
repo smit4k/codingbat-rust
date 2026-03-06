@@ -47,6 +47,23 @@ pub fn sum13(nums: &[i32]) -> i32 {
     sum
 }
 
+/// Given an array of ints, return `true` if the array contains two 7's next to each other, or there are two 7's separated by one element, such as with {7, 1, 7}.
+///
+/// # Test Cases
+/// ```
+/// use codingbat_rust::array2::has77;
+///
+///
+/// assert_eq!(has77(&[1, 7, 7]), true);
+/// assert_eq!(has77(&[1, 7, 1, 7]), true);
+/// assert_eq!(has77(&[1, 7, 1, 1, 7]), false);
+///
+/// ```
+pub fn has77(nums: &[i32]) -> bool {
+    nums.windows(2).any(|n| n[0] == 7 && n[1] == 7)
+        || nums.windows(3).any(|n| n[0] == 7 && n[2] == 7)
+}
+
 /// Return an array that is "left shifted" by one -- so {6, 2, 5, 3} returns {2, 5, 3, 6}.
 /// You may modify and return the given array, or return a new array.
 ///
