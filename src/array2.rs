@@ -111,6 +111,25 @@ pub fn only14(nums: &[i32]) -> bool {
     nums.iter().all(|&n| (n == 1) || (n == 4))
 }
 
+/// Given arrays nums1 and nums2 of the same length,
+/// for every element in nums1, consider the corresponding element in nums2 (at the same index).
+/// Return the count of the number of times that the two elements differ by 2 or less, but are not equal.
+///
+/// # Test Cases
+/// ```
+/// use codingbat_rust::array2::match_up;
+/// assert_eq!(match_up(&[1, 2, 3], &[2, 3, 10]), 2);
+/// assert_eq!(match_up(&[1, 2, 3], &[2, 3, 5]), 3);
+/// assert_eq!(match_up(&[1, 2, 3], &[2, 3, 3]), 2);
+/// ```
+pub fn match_up(nums1: &[i32], nums2: &[i32]) -> i32 {
+    nums1
+        .iter()
+        .zip(nums2.iter())
+        .filter(|(a, b)| (*a - *b).abs() <= 2 && a != b)
+        .count() as i32
+}
+
 /// Return a version of the given array where all the 10's have been removed.
 /// The remaining elements should shift left towards the start of the array as needed,
 /// and the empty spaces a the end of the array should be 0. So {1, 10, 10, 2} yields {1, 2, 0, 0}.
