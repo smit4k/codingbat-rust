@@ -488,6 +488,13 @@ mod tests {
     }
 
     #[test]
+    fn test_post4() {
+        assert_eq!(post4(&[2, 4, 1, 2]), vec![1, 2]);
+        assert_eq!(post4(&[4, 1, 4, 2]), vec![2]);
+        assert_eq!(post4(&[4, 4, 1, 2, 3]), vec![1, 2, 3]);
+    }
+
+    #[test]
     fn test_triple_up() {
         assert_eq!(triple_up(&[1, 4, 5, 6, 2]), true);
         assert_eq!(triple_up(&[1, 2, 3]), true);

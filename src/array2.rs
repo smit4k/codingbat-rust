@@ -14,6 +14,24 @@ pub fn count_evens(nums: &[i32]) -> u32 {
     nums.iter().filter(|&n| n % 2 == 0).count() as u32
 }
 
+/// Given a non-empty array of ints,
+/// return a new array containing the elements from the original array that come after the last 4 in the original array.
+/// The original array will contain at least one 4. Note that it is valid in java to create an array of length 0.
+///
+/// # Test Cases
+/// ```
+/// use codingbat_rust::array2::post4;
+///
+/// assert_eq!(post4(&[2, 4, 1, 2]), vec![1, 2]);
+/// assert_eq!(post4(&[4, 1, 4, 2]), vec![2]);
+/// assert_eq!(post4(&[4, 4, 1, 2, 3]), vec![1, 2, 3]);
+/// ```
+pub fn post4(nums: &[i32]) -> Vec<i32> {
+    nums.iter()
+        .rposition(|&x| x == 4)
+        .map_or(Vec::new(), |i| nums[i + 1..].to_vec())
+}
+
 /// Return the sum of the numbers in the array, returning 0 for an empty array.
 /// Except the number 13 is very unlucky, so it does not count and numbers that come immediately after a 13 also do not count.
 ///
