@@ -32,6 +32,22 @@ pub fn post4(nums: &[i32]) -> Vec<i32> {
         .map_or(Vec::new(), |i| nums[i + 1..].to_vec())
 }
 
+/// Given an array of ints, return true if the group of N numbers
+/// at the start and end of the array are the same.
+/// You may assume that n is in the range 0..nums.len() inclusive.
+///
+/// # Test Cases
+/// ```
+/// use codingbat_rust::array2::same_ends;
+///
+/// assert_eq!(same_ends(&[5, 6, 45, 99, 13, 5, 6], 1), false);
+/// assert_eq!(same_ends(&[5, 6, 45, 99, 13, 5, 6], 2), true);
+/// assert_eq!(same_ends(&[5, 6, 45, 99, 13, 5, 6], 3), false);
+/// ```
+pub fn same_ends(nums: &[i32], len: usize) -> bool {
+    nums[..len] == nums[nums.len() - len..]
+}
+
 /// Return the sum of the numbers in the array, returning 0 for an empty array.
 /// Except the number 13 is very unlucky, so it does not count and numbers that come immediately after a 13 also do not count.
 ///
