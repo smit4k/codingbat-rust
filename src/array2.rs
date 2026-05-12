@@ -289,6 +289,28 @@ pub fn triple_up(nums: &[i32]) -> bool {
         .any(|w| w[1] == w[0] + 1 && w[2] == w[1] + 1)
 }
 
+/// # Test Cases
+/// ```
+/// use codingbat_rust::array2::ten_run;
+///
+/// assert_eq!(ten_run(&[2, 10, 3, 4, 20, 5]), [2, 10, 10, 10, 20, 20]);
+/// assert_eq!(ten_run(&[10, 1, 20, 2]), [10, 10, 20, 20]);
+/// assert_eq!(ten_run(&[10, 1, 9, 20]), [10, 10, 10, 20]);
+/// ```
+pub fn ten_run(nums: &[i32]) -> Vec<i32> {
+    let mut current_multiple = None;
+
+    nums.iter()
+        .map(|&num| {
+            if num % 10 == 0 {
+                current_multiple = Some(num);
+            }
+
+            current_multiple.unwrap_or(num)
+        })
+        .collect()
+}
+
 /// Given an array of ints, return `true` if the number of 1's is greater than the number of 4's
 ///
 /// # Test Cases
