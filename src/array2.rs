@@ -311,6 +311,30 @@ pub fn ten_run(nums: &[i32]) -> Vec<i32> {
         .collect()
 }
 
+///
+/// Return the "centered" average of an array of ints, which we'll say is the mean average of the values,
+/// except ignoring the largest and smallest values in the array. If there are multiple copies of the smallest value,
+/// ignore just one copy, and likewise for the largest value. Use int division to produce the final average.
+/// You may assume that the array is length 3 or more.
+///
+///
+/// # Test Cases
+/// ```
+/// use codingbat_rust::array2::centered_average;
+///
+/// assert_eq!(centered_average(&[1, 2, 3, 4, 100]), 3);
+/// assert_eq!(centered_average(&[1, 1, 5, 5, 10, 8, 7]), 5);
+/// assert_eq!(centered_average(&[-10, -4, -2, -4, -2, 0]), -3);
+/// ```
+pub fn centered_average(nums: &[i32]) -> i32 {
+    let min = nums.iter().min().unwrap();
+    let max = nums.iter().max().unwrap();
+
+    let sum: i32 = nums.iter().sum();
+
+    (sum - min - max) / (nums.len() as i32 - 2)
+}
+
 /// Given an array of ints, return `true` if the number of 1's is greater than the number of 4's
 ///
 /// # Test Cases
