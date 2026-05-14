@@ -103,13 +103,13 @@ pub fn has77(nums: &[i32]) -> bool {
 ///
 /// # Test Cases
 /// ```
-/// use codingbat_rust::array2::left_shift;
+/// use codingbat_rust::array2::shift_left;
 ///
-/// assert_eq!(left_shift(&[6, 2, 5, 3]), [2, 5, 3, 6]);
-/// assert_eq!(left_shift(&[1, 2]), [2, 1]);
-/// assert_eq!(left_shift(&[1]), [1]);
+/// assert_eq!(shift_left(&[6, 2, 5, 3]), [2, 5, 3, 6]);
+/// assert_eq!(shift_left(&[1, 2]), [2, 1]);
+/// assert_eq!(shift_left(&[1]), [1]);
 /// ```
-pub fn left_shift(nums: &[i32]) -> Vec<i32> {
+pub fn shift_left(nums: &[i32]) -> Vec<i32> {
     let mut res = nums.to_vec();
     res.rotate_left(1);
     res
